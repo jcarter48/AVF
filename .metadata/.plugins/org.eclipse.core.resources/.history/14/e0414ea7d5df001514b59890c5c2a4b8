@@ -1,0 +1,6 @@
+var example = function(){
+	alert("function module");
+	
+};
+
+exports.example = example;

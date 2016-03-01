@@ -1,0 +1,16 @@
+var example = function(){
+	alert("function module");
+	
+	var animal = {
+		species : "cat",
+		breed : "domestic",
+		name: "milo",
+		age: 2
+	};
+	
+	var uiModule = require("ui");
+	uiModule.uiFunction(animal);
+	
+};
+
+exports.example = example;

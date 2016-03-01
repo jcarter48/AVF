@@ -1,7 +1,7 @@
 =run
 LAST_LAUNCH_TIMESTAMP=1456853665882
 Lecture1\:launchMode=run
-Lecture1\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.ipad.launchShortcut.4728B2D0-5FD3-4EC0-9052-95B23AD786A4
+Lecture1\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.70F9D705-3328-4D94-89B1-D6E7473B1383
 eclipse.preferences.version=1
 preference.show.console.onError=true
 preference.studio.perspective.version=103

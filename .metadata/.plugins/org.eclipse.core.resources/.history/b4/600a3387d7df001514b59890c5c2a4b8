@@ -1,0 +1,7 @@
+var uiFunction = function(){
+	alert("ui module");
+	
+	
+};
+
+exports.uiFunction = uiFunction;

@@ -1,0 +1,9 @@
+var example = function(){
+	alert("function module");
+	
+	
+	var uiModule = require("ui");
+	uiModule.uiFunction();
+};
+
+exports.example = example;

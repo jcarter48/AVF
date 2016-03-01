@@ -1,0 +1,2 @@
+var fnModule = require("function.js");
+fnModule.example();
