@@ -1,6 +1,6 @@
 //
 //  TiPreviewingDelegate.h
-//  Project1
+//  Titanium
 //
 //  Created by Hans Knöchel on 25/09/15.
 //

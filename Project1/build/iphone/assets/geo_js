@@ -1,1 +1,0 @@
-var getCoords=function(){if("android"===Ti.Platform.osname){Ti.Geolocation.purpose="Can we use your location?";x.coords.latitude,x.coords.longitude}Ti.Geolocation.getCurrentPosition(function(o){var e=o.coords.latitude,r=o.coords.longitude,t=require("network");t.dataPull(e,r)})};exports.getCoords=getCoords;
