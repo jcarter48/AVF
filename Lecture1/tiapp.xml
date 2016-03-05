@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <id>com.lecture1</id>
+    <id>com.carter1</id>
     <name>Lecture1</name>
     <version>1.0</version>
     <publisher>jacobcarter</publisher>
-    <url/>
-    <description/>
+    <url>undefined</url>
+    <description>undefined</description>
     <copyright>2016 by jacobcarter</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>

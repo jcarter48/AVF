@@ -1,0 +1,5 @@
+var stockRequest = function() {
+	aleert("network");
+};
+
+exports.stockRequest = stockRequest; 

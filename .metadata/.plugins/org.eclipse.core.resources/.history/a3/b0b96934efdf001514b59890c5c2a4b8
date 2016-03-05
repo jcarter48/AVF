@@ -1,0 +1,34 @@
+var buildUI = function(dataObj) {
+	var win = Ti.UI.createWindow({
+		backgroundColor: "ccc",
+		layout: "vertical"
+	});
+	var name = Ti.UI.createLabel({
+		color: "000",
+		text: "Name: " + dataObj.name
+	});
+	var symbol = Ti.UI.createLabel({
+		color: "000",
+		text: "Symbol: " + dataObj.symbol
+	});
+	var price = Ti.UI.createLabel({
+		color: "000",
+		text: "Price" + dataObj.price
+	});
+	var hi = Ti.UI.createLabel({
+		color: "000",
+		text: "High: " + dataObj.hi
+	});
+	var lo = Ti.UI.createLabel({
+		color: "000",
+		text: "Low " + dataObj.lo
+	});
+	win.add(name);
+	win.add(symbol);
+	win.add(price);
+	win.add(hi);
+	win.add(lo);
+	win.open();
+};
+
+exports.buildUI = buildUI;

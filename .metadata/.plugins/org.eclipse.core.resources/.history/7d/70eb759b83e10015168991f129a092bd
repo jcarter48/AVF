@@ -1,0 +1,28 @@
+var format = {
+	color : "00f",
+	top : 20,
+	backgroundColor : "fff"
+};
+
+var buildUI = function(lat, lng, city) {
+	var win = Ti.UI.createWindow({
+		backgroundColor : "ccc",
+		layout : "vertical"
+	});
+	var latLbl = Ti.UI.createLabel(format);
+	latLbl.text = "Latitude: " + lat;
+	var lngLbl = Ti.UI.createLabel(format);
+	lngLbl.text = "Longitude: " + lng;
+	var cityLbl = Ti.UI.createLabel(format);
+	cityLbl.text = "City: " + weatherObj.city;
+	var locationLbl = Ti.UI.createLabel(format);
+	locationLbl.text = "Location: " + weatherObj.location;
+
+	win.add(latLbl);
+	win.add(lngLbl);
+	win.add(cityLbl);
+	win.add(locationLbl);
+	win.open();
+};
+
+exports.buildUI = buildUI;

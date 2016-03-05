@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.appcelerator.titanium.mobile.ui.ios.installer.launchConfigurationType">
+<booleanAttribute key="ATTR_MINIFY" value="true"/>
+<stringAttribute key="ATTR_PROJECT_NAME" value="Lecture2"/>
+<stringAttribute key="ATTR_TITANIUM_DEPLOY_TYPE" value="development"/>
+<booleanAttribute key="ATTR_UPLOAD_DEBUG_SYMBOLS" value="false"/>
+<stringAttribute key="appid" value="com.carter.carter2"/>
+<stringAttribute key="certificate" value="hepzat@live.com (3AKQELFDU6)"/>
+<stringAttribute key="debug_config" value="::1457022997981:10.63.55.129"/>
+<stringAttribute key="debug_hosts" value="10.63.55.129"/>
+<stringAttribute key="device_id" value="0504ddb9baf4b26125ae73005fd99b92a7e2c675"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/Lecture2"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.debug.core.capture_output" value="true"/>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_LAUNCH_IN_BACKGROUND" value="true"/>
+<stringAttribute key="process_factory_id" value="com.appcelerator.titanium.ui.logLevelFilteringProcessFactory"/>
+<stringAttribute key="sdk_version" value="9.2"/>
+<stringAttribute key="uuid" value="f1c2ce3b-1eff-4a6d-bccc-7f48c1c5ffaa"/>
+</launchConfiguration>

@@ -1,0 +1,30 @@
+var format = {
+	color : "00f",
+	top : 20,
+	backgroundColor : "fff"
+};
+
+var buildUI = function(wObj) {
+	var win = Ti.UI.createWindow({
+		backgroundColor : "ccc",
+		layout : "vertical"
+	});
+	// var latLbl = Ti.UI.createLabel(format);
+	// latLbl.text = "Latitude: " + lat;
+	// var lngLbl = Ti.UI.createLabel(format);
+	// lngLbl.text = "Longitude: " + lng;
+	var cityLbl = Ti.UI.createLabel(format);
+	cityLbl.text = "City: " + wObj.city;
+	var countryLbl = Ti.UI.createLabel(format);
+	countryLbl.text = "Country: " + wObj.country;
+	var dateLbl = Ti.UI.createLabel(format);
+	dateLbl.text = wObj.country;
+	//win.add(latLbl);
+	//win.add(lngLbl);
+	win.add(cityLbl);
+	win.add(countryLbl);
+	win.add(dateLbl);
+	win.open();
+};
+
+exports.buildUI = buildUI;

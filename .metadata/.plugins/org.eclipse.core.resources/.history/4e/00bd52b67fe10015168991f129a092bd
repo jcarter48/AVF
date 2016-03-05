@@ -1,0 +1,6 @@
+if (Ti.Network.online) {
+	var network = require("network");
+	network.dataPull();
+} else {
+	alert("please enable network");
+}

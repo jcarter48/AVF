@@ -1,0 +1,48 @@
+var format = {
+	color : "fff",
+	top : 20,
+	//backgroundColor : "fff",
+	font: {fontSize: 60}
+};
+
+var buildUI = function(wObj) {
+	var win = Ti.UI.createWindow({
+		backgroundImage : "background.png",
+		backgroundRepeat: "repeat-y",
+		layout : "vertical"
+	});
+	// var latLbl = Ti.UI.createLabel(format);
+	// latLbl.text = "Latitude: " + lat;
+	// var lngLbl = Ti.UI.createLabel(format);
+	// lngLbl.text = "Longitude: " + lng;
+	// var icon = Ti.UI.createImageView({
+		// image: wObj.icon,
+		// top: 20
+	// });
+	var iconLbl = Ti.UI.createLabel(format);
+	iconLbl.text = "Conditions: " + wObj.conditions;
+	var whereLbl = Ti.UI.createLabel(format);
+	whereLbl.text = wObj.city + ", " +wObj.country;
+	var timeLbl = Ti.UI.createLabel(format);
+	timeLbl.text = "Time: " + wObj.time;
+	var highLbl = Ti.UI.createLabel(format);
+	highLbl.text = "High: " + wObj.high;
+	var lowLbl = Ti.UI.createLabel(format);
+	lowLbl.text = "Low: " + wObj.low;
+	var dateLbl = Ti.UI.createLabel(format);
+	dateLbl.text = "Date: " + wObj.month + "/" + wObj.day + "/" + wObj.year;
+	
+	//win.add(latLbl);
+	//win.add(lngLbl);
+	// win.add(icon);
+	win.add(iconLbl);
+	win.add(whereLbl);
+	win.add(timeLbl);
+	win.add(highLbl);
+	win.add(lowLbl);
+	win.add(dateLbl);
+	
+	win.open();
+};
+
+exports.buildUI = buildUI;
