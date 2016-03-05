@@ -1,8 +1,10 @@
 /**
  * Appcelerator Titanium Mobile
- * Copyright (c) 2015 by Appcelerator, Inc. All Rights Reserved.
+ * Copyright (c) 2009-2016 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
+ * 
+ * WARNING: This is generated code. Modify at your own risk and without support.
  */
 #if IS_XCODE_7
 
@@ -55,7 +57,7 @@
 @end
 
 @implementation WatchSessionModule
-#pragma mark Titanium components
+#pragma mark Project1 components
 
 -(NSString*)apiName
 {

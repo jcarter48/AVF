@@ -6,7 +6,7 @@ var win = Ti.UI.createWindow({
 	
 var format1 = {
 	text: "...",
-	color : "fff",
+	color : "#ffffff",
 	top : 40,
 	//backgroundColor : "fff",
 	font: {fontSize: 60}
@@ -14,7 +14,7 @@ var format1 = {
 
 var format2 = {
 	text: "...",
-	color : "fff",
+	color : "#ffffff",
 	top : 40,
 	//backgroundColor : "fff",
 	font: {fontSize: 40}
@@ -22,7 +22,8 @@ var format2 = {
 
 var dateLbl = Ti.UI.createLabel(format2);
 var timeLbl = Ti.UI.createLabel(format2);
-var whereLbl = Ti.UI.createLabel(format2);		
+var whereLbl = Ti.UI.createLabel(format2);	
+var tempNowLbl = Ti.UI.createLabel(format1);	
 var tempLbl = Ti.UI.createLabel(format1);
 var iconLbl = Ti.UI.createLabel(format1);
 var aveWindLbl = Ti.UI.createLabel(format1);
@@ -40,6 +41,7 @@ var buildUI = function(wObj) {
 	dateLbl.text = wObj.month + "/" + wObj.day + "/" + wObj.year;
 	timeLbl.text = wObj.time;
 	whereLbl.text = wObj.city + ", " +wObj.country;
+	tempNowLbl.text = "Current Temp: " + wObj.tempNow;
 	tempLbl.text = "High: " + wObj.high + ", Low: " + wObj.low;
 	iconLbl.text = "Conditions: " + wObj.conditions;
 	aveWindLbl.text = "Average: " + wObj.aveWind + " mph";
@@ -49,6 +51,7 @@ var buildUI = function(wObj) {
 	win.add(dateLbl);
 	win.add(timeLbl);
 	win.add(whereLbl);
+	win.add(tempNowLbl);
 	win.add(tempLbl);
 	win.add(iconLbl);
 	win.add(aveWindLbl);

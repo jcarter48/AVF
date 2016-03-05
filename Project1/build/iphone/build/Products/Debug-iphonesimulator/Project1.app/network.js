@@ -22,8 +22,8 @@ var dataPull = function(lat, lng) {
 			day : weatherInfo.forecast.simpleforecast.forecastday[0].date.day,
 			year : weatherInfo.forecast.simpleforecast.forecastday[0].date.year,
 			aveWind : weatherInfo.forecast.simpleforecast.forecastday[0].avewind.mph,
-			maxWind : weatherInfo.forecast.simpleforecast.forecastday[0].maxwind.mph
-
+			maxWind : weatherInfo.forecast.simpleforecast.forecastday[0].maxwind.mph,
+			tempNow : weatherInfo.current_observation.temp_f
 			//current temp
 			//avewind maxwin lower in hierarchy
 		};

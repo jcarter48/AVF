@@ -1,8 +1,10 @@
 /**
  * Appcelerator Titanium Mobile
- * Copyright (c) 2009-2010 by Appcelerator, Inc. All Rights Reserved.
+ * Copyright (c) 2009-2016 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
+ * 
+ * WARNING: This is generated code. Modify at your own risk and without support.
  */
 #ifdef USE_TI_UIIPHONEACTIVITYINDICATORSTYLE
 
@@ -16,9 +18,9 @@
     return @"Ti.UI.iPhone.ActivityIndicatorStyle";
 }
 
-MAKE_SYSTEM_PROP_DEPRECATED_REPLACED(PLAIN, UIActivityIndicatorViewStyleWhite, @"UI.iPhone.ActivityIndicatorStyle.PLAIN", @"5.1.0", @"Titanium.UI.ActivityIndicatorStyle.PLAIN");
-MAKE_SYSTEM_PROP_DEPRECATED_REPLACED(BIG, UIActivityIndicatorViewStyleWhiteLarge, @"UI.iPhone.ActivityIndicatorStyle.BIG", @"5.1.0", @"Titanium.UI.ActivityIndicatorStyle.BIG");
-MAKE_SYSTEM_PROP_DEPRECATED_REPLACED(DARK, UIActivityIndicatorViewStyleGray, @"UI.iPhone.ActivityIndicatorStyle.DARK", @"5.1.0", @"Titanium.UI.ActivityIndicatorStyle.DARK");
+MAKE_SYSTEM_PROP_DEPRECATED_REPLACED(PLAIN, UIActivityIndicatorViewStyleWhite, @"UI.iPhone.ActivityIndicatorStyle.PLAIN", @"5.1.0", @"Project1.UI.ActivityIndicatorStyle.PLAIN");
+MAKE_SYSTEM_PROP_DEPRECATED_REPLACED(BIG, UIActivityIndicatorViewStyleWhiteLarge, @"UI.iPhone.ActivityIndicatorStyle.BIG", @"5.1.0", @"Project1.UI.ActivityIndicatorStyle.BIG");
+MAKE_SYSTEM_PROP_DEPRECATED_REPLACED(DARK, UIActivityIndicatorViewStyleGray, @"UI.iPhone.ActivityIndicatorStyle.DARK", @"5.1.0", @"Project1.UI.ActivityIndicatorStyle.DARK");
 
 @end
 

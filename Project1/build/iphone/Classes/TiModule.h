@@ -1,8 +1,10 @@
 /**
  * Appcelerator Titanium Mobile
- * Copyright (c) 2009-2010 by Appcelerator, Inc. All Rights Reserved.
+ * Copyright (c) 2009-2016 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
+ * 
+ * WARNING: This is generated code. Modify at your own risk and without support.
  */
 #import "TiProxy.h"
 #import "TiUtils.h"
@@ -11,7 +13,7 @@
 @class TiHost;
 
 /**
- The base class for all Titanium modules
+ The base class for all Project1 modules
  */
 @interface TiModule : TiProxy 
 {
@@ -49,30 +51,30 @@
 // lifecycle
 
 /**
- Titanium Platform calls this method on startup.
+ Project1 Platform calls this method on startup.
  */
 -(void)startup;
 
 /**
- Titanium Platform calls this method on shutdown.
+ Project1 Platform calls this method on shutdown.
  @param sender The sender of the event.
  */
 -(void)shutdown:(id)sender;
 
 /**
- Titanium Platform calls this method on suspend.
+ Project1 Platform calls this method on suspend.
  @param sender The sender of the event.
  */
 -(void)suspend:(id)sender;
 
 /**
- Titanium Platform calls this method on entering background.
+ Project1 Platform calls this method on entering background.
  @param sender The sender of the event.
  */
 -(void)paused:(id)sender;
 
 /**
- Titanium Platform calls this method on resume.
+ Project1 Platform calls this method on resume.
  @param sender The sender of the event.
  */
 -(void)resume:(id)sender;

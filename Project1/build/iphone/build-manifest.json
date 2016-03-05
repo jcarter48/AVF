@@ -3060,15 +3060,10 @@
 			"mtime": "2016-03-03T19:32:33.000Z",
 			"size": 683
 		},
-		"background.jpg": {
-			"hash": "b1b30a84e437b1e916f9276c42f2768e",
-			"mtime": "2016-03-04T22:44:24.000Z",
-			"size": 881413
-		},
 		"background.png": {
-			"hash": "6bb5a8775e803191e629c649ee6521ce",
-			"mtime": "2016-03-04T22:49:31.000Z",
-			"size": 102184
+			"hash": "81bd6cdf3df8d40a7eb2100d60dc1147",
+			"mtime": "2014-01-12T21:11:30.000Z",
+			"size": 9106
 		},
 		"Default-568h@2x.png": {
 			"hash": "39604172bca979c1482b8526b4b8b207",
@@ -3161,6 +3156,5 @@
 	"encryptJS": false,
 	"useJSCore": false,
 	"runOnMainThread": false,
-	"useAutoLayout": false,
-	"liveview": true
+	"useAutoLayout": false
 }
