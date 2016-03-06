@@ -1,14 +1,11 @@
 var dataPull = function(lat, lng) {
 
-	//note: lat should be "40.689244"
-	//var url = "http://api.wunderground.com/api/465b4ffeedaac08a/forecast/geolookup/q/" + geoModule.lat + "," + geoModule.lng + ".json";
 	var url = "http://api.wunderground.com/api/465b4ffeedaac08a/forecast/geolookup/conditions/q/" + lat + "," + lng + ".json";
 	var onLoad = function(x) {
 		//console.log(x);
 		//console.log(JSON.stringify(x.source));
 
 		var weatherInfo = JSON.parse(this.responseText);
-		//console.log(weatherInfo);
 
 		var weatherObj = {
 			icon : weatherInfo.forecast.simpleforecast.forecastday[0].icon_url,
@@ -24,8 +21,6 @@ var dataPull = function(lat, lng) {
 			aveWind : weatherInfo.forecast.simpleforecast.forecastday[0].avewind.mph,
 			maxWind : weatherInfo.forecast.simpleforecast.forecastday[0].maxwind.mph,
 			tempNow : weatherInfo.current_observation.temp_f
-			//current temp
-			//avewind maxwin lower in hierarchy
 		};
 
 		// var fCastDays = [];
@@ -47,7 +42,6 @@ var dataPull = function(lat, lng) {
 		console.log(x);
 		console.log(JSON.stringify(x.source));
 	};
-	//console.log(lat + "....");
 
 	if (Ti.Network.online) {
 		var getData = Ti.Network.createHTTPClient({

@@ -1,5 +1,4 @@
 var getCoords = function() {
-	//console.log(x.coords.latitude + "...");
 	if (Ti.Platform.osname === "android") {
 		Ti.Geolocation.purpose = "Can we use your location?";
 		console.log("....");
@@ -10,20 +9,14 @@ var getCoords = function() {
 
 		var netModule = require("network");
 		netModule.dataPull(lat, lng);
+		//not sure how to correctly do this part for android
 	} else {
 
 	}
 
 	Ti.Geolocation.getCurrentPosition(function(x) {
-		//console.log(x);
 		var lat = x.coords.latitude;
 		var lng = x.coords.longitude;
-
-		// console.log("lat: " + lat);
-		// console.log("lng: " + lng);
-
-		//var uiModule = require("ui");
-		//uiModule.buildUI(lat, lng);
 
 		var netModule = require("network");
 		netModule.dataPull(lat, lng);

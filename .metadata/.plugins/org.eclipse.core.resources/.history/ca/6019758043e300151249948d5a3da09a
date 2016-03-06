@@ -1,0 +1,99 @@
+var win = Ti.UI.createWindow({
+		backgroundColor: "#fff",
+		backgroundImage : "background.png",
+		backgroundRepeat: "repeat-y",
+		layout : "vertical",
+	});
+	
+var pWidth = Ti.Platform.displayCaps.platformWidth;
+console.log(pWidth);
+	
+var format1 = {
+	text: "...",
+	color : "#ffffff",
+	top : 40,
+	left: 64,
+	//backgroundColor : "fff",
+	font: {fontSize: 30}
+};
+
+var format2 = {
+	text: "...",
+	color : "#ffffff",
+	top : 20,
+	left: 64,
+	//backgroundColor : "fff",
+	font: {fontSize: 30}
+};
+
+var format3 = {
+	text: "...",
+	color : "#ffffff",
+	top : 20,
+	left: 64,
+	//backgroundColor : "fff",
+	font: {fontSize: 45}
+};
+
+var format4 = {
+	text: "...",
+	color : "#ffffff",
+	top : 300,
+	//backgroundColor : "fff",
+	font: {fontSize: 60}
+};
+
+var dateLbl = Ti.UI.createLabel(format1);
+var timeLbl = Ti.UI.createLabel(format2);
+var iconLbl = Ti.UI.createLabel(format3);
+var tempNowLbl = Ti.UI.createLabel(format3);	
+var tempLbl = Ti.UI.createLabel(format2);
+var aveWindLbl = Ti.UI.createLabel(format2);
+var maxWindLbl = Ti.UI.createLabel(format2);
+var whereLbl = Ti.UI.createLabel(format4);	
+var icon = Ti.UI.createImageView({
+	height: 75,
+	width : 75
+	});
+win.open();
+	
+var buildUI = function(wObj) {
+	dateLbl.text = wObj.month + "/" + wObj.day + "/" + wObj.year;
+	timeLbl.text = wObj.time;
+	iconLbl.text = wObj.conditions;
+	tempNowLbl.text = "Current: " + wObj.tempNow + "°";
+	tempLbl.text = "High: " + wObj.high + "°, Low: " + wObj.low + "°";
+	aveWindLbl.text = "Average: " + wObj.aveWind + " mph";
+	maxWindLbl.text = "Max: " + wObj.maxWind + " mph";
+	whereLbl.text = wObj.city + ", " +wObj.country;
+	icon.image = wObj.icon;
+	
+	win.add(dateLbl);
+	win.add(timeLbl);
+	win.add(iconLbl);
+	win.add(tempNowLbl);
+	win.add(tempLbl);
+	win.add(aveWindLbl);
+	win.add(maxWindLbl); 
+	win.add(whereLbl);
+	win.add(icon);
+	// for (i-0, j=wObj.days.length; i<j; i++){
+		// var title = Ti.UI.createLabel({
+			// text : wObj.days[i].title,
+			// top: 30
+		// });
+		// win.add(title);
+		// win.add(Ti.UI.createLabel({
+			// text: wObj.days[i].fcttext,
+			// top: 30
+		// }));
+		// win.add(Ti.UI.createImageView({
+			// image: wObj.days[i].icon
+		// }));
+	// }
+	
+	// win.add(icon);
+	
+};
+
+exports.buildUI = buildUI;
