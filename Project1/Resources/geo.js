@@ -1,19 +1,19 @@
 var getCoords = function() {
-	if (Ti.Platform.osname === "android") {
-		Ti.Geolocation.purpose = "Can we use your location?";
-		console.log("....");
-		// var lat = x.coords.latitude;
-		// var lng = x.coords.longitude;
-		var lat = 40.689244;
-		var lng = -71.044514;
-
-		var netModule = require("network");
-		netModule.dataPull(lat, lng);
-		//not sure how to correctly do this part for android
-	} else {
-
-	}
-
+	// if (Ti.Platform.osname === "android") {
+		// Ti.Geolocation.purpose = "Can we use your location?";
+		// console.log("....");
+		// // var lat = x.coords.latitude;
+		// // var lng = x.coords.longitude;
+		// var lat = 40.689244;
+		// var lng = -71.044514;
+// 
+		// var netModule = require("network");
+		// netModule.dataPull(lat, lng);
+		// //not sure how to correctly do this part for android
+	// } else {
+// 
+	// }
+	// ^dont need if testing with my real phone
 	Ti.Geolocation.getCurrentPosition(function(x) {
 		var lat = x.coords.latitude;
 		var lng = x.coords.longitude;

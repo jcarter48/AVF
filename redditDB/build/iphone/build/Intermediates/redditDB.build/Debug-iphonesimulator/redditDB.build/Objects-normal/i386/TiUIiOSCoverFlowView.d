@@ -1,0 +1,43 @@
+dependencies: \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/TiUIiOSCoverFlowView.m \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/TiUIiOSCoverFlowView.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/TiUIView.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/TiProxy.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/TiEvaluator.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/KrollContext.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/TiToJS.h \
+  headers/JavaScriptCore/TiCore.h headers/JavaScriptCore/Ti.h \
+  headers/JavaScriptCore/TiBase.h headers/JavaScriptCore/TiContextRef.h \
+  headers/JavaScriptCore/TiObjectRef.h \
+  headers/JavaScriptCore/TiValueRef.h \
+  headers/JavaScriptCore/WebKitAvailability.h \
+  headers/JavaScriptCore/TiStringRef.h \
+  headers/JavaScriptCore/TiStringRefCF.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/KrollCallback.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/KrollObject.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/TiBindingRunLoop.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/TiBase.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/TiThreading.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/TiPublicAPI.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/TiAnimation.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/TiPoint.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/TiDimension.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/TiColor.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/ListenerEntry.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/TiModule.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/TiUtils.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/WebFont.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/TiFile.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/TiBuffer.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/TiBlob.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/LayoutConstraint.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/TiGradient.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/AFOpenFlow/AFOpenFlowView.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/AFOpenFlow/AFItemView.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/ImageLoader.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/APSHTTPClient/APSHTTPClient.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/APSHTTPClient/APSHTTPRequest.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/APSHTTPClient/APSHTTPResponse.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/APSHTTPClient/APSHTTPPostForm.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/APSHTTPClient/APSHTTPHelper.h \
+  /Users/jacobcarter/Documents/AVF/redditDB/build/iphone/Classes/AFOpenFlow/UIImageExtras.h

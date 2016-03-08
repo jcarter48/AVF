@@ -1,0 +1,5 @@
+var getData = function(){
+	
+	
+};
+exports.getData = getData;

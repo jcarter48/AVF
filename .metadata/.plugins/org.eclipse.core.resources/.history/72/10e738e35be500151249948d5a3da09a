@@ -1,0 +1,27 @@
+var getData = function(){
+	
+	var onLoad = function(){
+		
+		var result = JSON.parse(this.responseText);
+		console.log(result);
+		
+		for(var i=0, j=) 
+		var redditArray =
+		
+	};
+	
+	var onError = function(x){
+		console.log("error getting data", x.error);
+	};
+	
+	var xhr = Ti.Network.createHTTPClient({
+		onload: onLoad,
+		onerror: onError,
+		timeout: 3000
+	});
+	var url = "https://api.reddit.com/r/aww";
+	
+	xhr.open("GET", url);
+	xhr.send();	
+};
+exports.getData = getData;

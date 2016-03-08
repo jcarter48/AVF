@@ -1,6 +1,6 @@
 {
-	"target": "device",
-	"deployType": "test",
+	"target": "emulator",
+	"deployType": "development",
 	"classname": "Project1",
 	"platformPath": "/Users/jacobcarter/Library/Application Support/Titanium/mobilesdk/osx/5.1.0.GA/android",
 	"modulesHash": "d41d8cd98f00b204e9800998ecf8427e",
@@ -25,8 +25,8 @@
 	"encryptJS": true,
 	"minSDK": 14,
 	"targetSDK": 23,
-	"propertiesHash": "57dc9c9ad10be22c53abef5e7d66d52e",
+	"propertiesHash": "d025ca2607ee1a28375309a2b115aa99",
 	"activitiesHash": "d41d8cd98f00b204e9800998ecf8427e",
 	"servicesHash": "d41d8cd98f00b204e9800998ecf8427e",
-	"jarLibHash": "7d104b549c663df4748481ba93f69b8d"
+	"jarLibHash": "d89a6681beb3aa28205988973a7d062d"
 }

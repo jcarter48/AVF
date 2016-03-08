@@ -1,0 +1,25 @@
+var win = Ti.UI.createWindow({
+	backgroundColor : "ccc"
+});
+
+var format = {
+	color: "#000",
+	top: 20
+};
+
+var title = Ti.UI.createLabel(format);
+title.text = "Title: ...";
+var author = Ti.UI.createLabel(format);
+author.text = "Author: ...";
+var thumb = Ti.UI.createImageView();
+
+win.add(thumb);
+win.add(title);
+win.add(author);
+win.open();
+
+var buildUI = function(){
+	
+};
+
+exports.buildUI = buildUI;
