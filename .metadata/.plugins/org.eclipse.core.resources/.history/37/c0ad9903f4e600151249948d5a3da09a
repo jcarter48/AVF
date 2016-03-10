@@ -1,0 +1,11 @@
+var uiModule = require("ui");
+
+if (Ti.Network.online){
+	var apiModule = require("api");
+	apiModule.getData();
+} else {
+	alert("no network");
+	//read from LS
+	var dbModule = require("database");
+	dbModule.read();
+}
