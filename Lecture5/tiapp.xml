@@ -5,7 +5,7 @@
     <version>1.0</version>
     <publisher>jacobcarter</publisher>
     <url/>
-    <description/>
+    <description>undefined</description>
     <copyright>2016 by jacobcarter</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
@@ -17,7 +17,7 @@
         <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
         <plist>
             <dict>
-            	<key>NSLocationWhenInUseUsageDescription</key>
+                <key>NSLocationWhenInUseUsageDescription</key>
                 <string>Need your location, ok?</string>
                 <key>UISupportedInterfaceOrientations~iphone</key>
                 <array>
@@ -51,7 +51,7 @@
         <theme>default</theme>
     </mobileweb>
     <modules>
-    <module platform="iphone">ti.map</module>
+        <module platform="iphone">ti.map</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>

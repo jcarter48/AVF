@@ -28,12 +28,12 @@ var read = function() {
 			time : dbRows.fieldByName("time"),
 			high : dbRows.fieldByName("high"),
 			low : dbRows.fieldByName("low"),
-			month : dbRows.fieldByName("month"),
+			month : Math.floor(dbRows.fieldByName("month")),
 			day : Math.floor(dbRows.fieldByName("day")),
-			year :dbRows.fieldByName("year"),
+			year :Math.floor(dbRows.fieldByName("year")),
 			aveWind : dbRows.fieldByName("aveWind"),
 			maxWind : dbRows.fieldByName("maxWind"),
-			tempNow : dbRows.fieldByName("tempNow"),
+			tempNow : Math.floor(dbRows.fieldByName("tempNow")),
 			forecast : JSON.parse(dbRows.fieldByName("forecast"))
 		};
 		

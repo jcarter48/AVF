@@ -1,5 +1,0 @@
-var stockRequest = function(){
-	
-};
-
-exports.stockRequest = stockRequest;

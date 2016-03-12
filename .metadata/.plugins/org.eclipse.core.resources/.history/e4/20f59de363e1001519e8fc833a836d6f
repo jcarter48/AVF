@@ -1,7 +1,0 @@
-var getCoords = function(){
-	
-	
-};
-
-
-exports.getCoords = getCoords;

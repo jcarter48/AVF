@@ -1,2 +1,3 @@
-FIND_BAR_DECORATOR_FIND_ENTRIES=\#\n\#Thu Mar 03 16\:49\:09 EST 2016\n6\=stockinfo\n5\=....\n4\=..\n3\=stockObj\n2\=uiModule\n1\=dataPull\n0\=testValues\n
+FIND_BAR_DECORATOR_FIND_ENTRIES=\#\n\#Sat Mar 12 14\:30\:30 EST 2016\n8\=redditDb\n7\=redditDB\n6\=redditTBL\n5\=netModule\n4\=require\n3\=...\n2\=apiInfo\n1\=weatherArray\n0\=weatherObj\n
+FIND_BAR_DECORATOR_REPLACE_ENTRIES=\#\n\#Thu Mar 10 16\:10\:01 EST 2016\n3\=weather\n2\=weatherDB\n1\=weatherTBL\n0\=wObj\n
 eclipse.preferences.version=1
