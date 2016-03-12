@@ -92,21 +92,21 @@ var buildUI = function(wObj){
 	win.add(whereLbl);
 	win.add(icon);
 	
-	// for (var i=0, j=dbInfo.length; i<j; i++){
-		// win.add(Ti.UI.createLabel({
-			// text : "Title: " + dbInfo[i].title,
-			// color: "#00f",
-			// top: 50
-	// }));
-// 	
-	// var author = Ti.UI.createLabel(format);
-	// author.text = "Author: " + dbInfo[i].author;
-	// win.add(author);
-// 	
-	// var thumb = Ti.UI.createImageView();
-	// thumb.image = dbInfo[i].img;
-	// win.add(thumb);
-	// }
+	for (var i=0, j=wObj.length; i<j; i++){
+		win.add(Ti.UI.createLabel({
+			text : wObj[i].fcTitle,
+			color: "#00f",
+			top: 50
+	}));
+	
+	var desc = Ti.UI.createLabel(format);
+	desc.text = wObj[i].fcDesc;
+	win.add(desc);
+	
+	var icon1 = Ti.UI.createImageView();
+	icon1.image = wObj[i].fcIcon;
+	win.add(icon1);
+	}
 };
 
 exports.buildUI = buildUI;

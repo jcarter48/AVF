@@ -7,7 +7,7 @@ var getData = function(lat, lng){
 		var weatherInfo = JSON.parse(this.responseText);
 		//console.log(weatherInfo);
 		
-		//var weatherArray = [];
+		var weatherArray = [];
 		
 		var weatherObj = {
 			icon : weatherInfo.forecast.simpleforecast.forecastday[0].icon_url,
@@ -25,16 +25,20 @@ var getData = function(lat, lng){
 			tempNow : weatherInfo.current_observation.temp_f
 		};
 		
-		// for(var i=0, j=result.data.children.length; i<j; i++){
-			// weatherArray.push ({ 
-				// title: result.data.children[i].data.title,
-				// author: result.data.children[i].data.author,
-				// thumb : result.data.children[i].data.thumbnail 
-			// });
-		// } 
-		//console.log(weatherArray);
+		for(var i=0, j=weatherInfo.forecast.txt_forecast.forecastday.length; i<j; i++){
+			weatherArray.push ({ 
+				fcTitle : weatherInfo.forecast.txt_forecast.forecastday[i].title,
+				fcDesc : weatherInfo.forecast.txt_forecast.forecastday[i].fcttext,
+				fcIcon : weatherInfo.forecast.txt_forecast.forecastday[i].icon_url
+			});
+		} 
 		
+		//console.log(weatherArray[0]);
+		//console.log(weatherObj);
+		
+		//console.log(weatherInfo.forecast.forecastday);
 		var dbModule = require("database");
+		weatherObj.forecast = weatherArray;
 		dbModule.save(weatherObj);
 		//dbModule.save(weatherArray);
 		
