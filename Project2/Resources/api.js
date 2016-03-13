@@ -1,14 +1,13 @@
-var getData = function(lat, lng){
-	
+var getData = function(lat, lng) {
+
 	var url = "http://api.wunderground.com/api/465b4ffeedaac08a/forecast/geolookup/conditions/q/" + lat + "," + lng + ".json";
-	//console.log("..." + url);
-	var onLoad = function(){
-		
+
+	var onLoad = function() {
+
 		var weatherInfo = JSON.parse(this.responseText);
-		//console.log(weatherInfo);
-		
+
 		var weatherArray = [];
-		
+
 		var weatherObj = {
 			icon : weatherInfo.forecast.simpleforecast.forecastday[0].icon_url,
 			conditions : weatherInfo.forecast.simpleforecast.forecastday[0].conditions,
@@ -24,37 +23,33 @@ var getData = function(lat, lng){
 			maxWind : weatherInfo.forecast.simpleforecast.forecastday[0].maxwind.mph,
 			tempNow : weatherInfo.current_observation.temp_f
 		};
-		
-		for(var i=0, j=weatherInfo.forecast.txt_forecast.forecastday.length; i<j; i++){
-			weatherArray.push ({ 
+
+		for (var i = 0,
+		    j = weatherInfo.forecast.txt_forecast.forecastday.length; i < j; i++) {
+			weatherArray.push({
 				fcTitle : weatherInfo.forecast.txt_forecast.forecastday[i].title,
 				fcDesc : weatherInfo.forecast.txt_forecast.forecastday[i].fcttext,
 				fcIcon : weatherInfo.forecast.txt_forecast.forecastday[i].icon_url
 			});
-		} 
-		
-		//console.log(weatherArray[0]);
-		//console.log(weatherObj);
-		
-		//console.log(weatherInfo.forecast.forecastday);
+		}
+
 		var dbModule = require("database");
 		weatherObj.forecast = weatherArray;
 		dbModule.save(weatherObj);
-		//dbModule.save(weatherArray);
-		
+
 	};
-	
-	var onError = function(x){
+
+	var onError = function(x) {
 		console.log("error getting data", x.error);
 	};
-	
+
 	var xhr = Ti.Network.createHTTPClient({
-		onload: onLoad,
-		onerror: onError,
-		timeout: 3000
+		onload : onLoad,
+		onerror : onError,
+		timeout : 3000
 	});
-	
+
 	xhr.open("GET", url);
-	xhr.send();	
+	xhr.send();
 };
 exports.getData = getData;

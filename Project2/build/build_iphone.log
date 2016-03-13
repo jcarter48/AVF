@@ -1,5 +1,5 @@
 
-3/12/2016, 4:13:04 PM
+3/12/2016, 8:22:18 PM
 
 Operating System
   Name                        = Mac OS X
@@ -21,12 +21,12 @@ Titanium SDK
   Target Platform             = iphone
 
 Command
-  /usr/local/bin/node /Users/jacobcarter/.appcelerator/install/5.2.0/package/node_modules/titanium/lib/titanium.js build run --platform ios --log-level trace --sdk 5.2.0.GA --project-dir /Users/jacobcarter/Documents/AVF/Project2 --target simulator --ios-version 9.2 --device-family universal --deploy-type development --sim-type ipad --sim-version 9.2 --device-id 4728B2D0-5FD3-4EC0-9052-95B23AD786A4 --skip-js-minify --no-colors --no-progress-bars --no-prompt --prompt-type socket-bundle --prompt-port 54069 --config-file /var/folders/jq/f45s60gd5rsbdtnw_fllr1d00000gn/T/build-1457817182287.json --no-banner --project-dir /Users/jacobcarter/Documents/AVF/Project2
+  /usr/local/bin/node /Users/jacobcarter/.appcelerator/install/5.2.0/package/node_modules/titanium/lib/titanium.js build run --platform ios --log-level trace --sdk 5.2.0.GA --project-dir /Users/jacobcarter/Documents/AVF/Project2 --target simulator --ios-version 9.2 --device-family universal --sim-type iphone --sim-version 9.2 --device-id A90467E2-7314-46DB-91A8-E629FF8C1CBE --skip-js-minify --liveview --deploy-type development --no-colors --no-progress-bars --no-prompt --prompt-type socket-bundle --prompt-port 63226 --config-file /var/folders/jq/f45s60gd5rsbdtnw_fllr1d00000gn/T/build-1457832136543.json --no-banner --project-dir /Users/jacobcarter/Documents/AVF/Project2
 
-[TRACE]  [ioslib] Validating iOS Simulator UDID 4728B2D0-5FD3-4EC0-9052-95B23AD786A4
-[TRACE]  [ioslib] Found iOS Simulator UDID 4728B2D0-5FD3-4EC0-9052-95B23AD786A4
-[TRACE]  [ioslib] Selected iOS Simulator: iPad 2
-[TRACE]  [ioslib]   UDID    = 4728B2D0-5FD3-4EC0-9052-95B23AD786A4
+[TRACE]  [ioslib] Validating iOS Simulator UDID A90467E2-7314-46DB-91A8-E629FF8C1CBE
+[TRACE]  [ioslib] Found iOS Simulator UDID A90467E2-7314-46DB-91A8-E629FF8C1CBE
+[TRACE]  [ioslib] Selected iOS Simulator: iPhone 5
+[TRACE]  [ioslib]   UDID    = A90467E2-7314-46DB-91A8-E629FF8C1CBE
 [TRACE]  [ioslib]   iOS     = 9.2
 [TRACE]  [ioslib] Autoselected Xcode: 7.2.1
 [DEBUG]  Detecting modules in /Users/jacobcarter/Library/Application Support/Titanium/modules
@@ -64,9 +64,9 @@ Command
 [INFO]   Deploy type: development
 [INFO]   Building for target: simulator
 [INFO]   Building using iOS SDK: 9.2
-[INFO]   Building for iOS Simulator: iPad 2
-[DEBUG]  UDID: 4728B2D0-5FD3-4EC0-9052-95B23AD786A4
-[DEBUG]  Simulator type: ipad
+[INFO]   Building for iOS Simulator: iPhone 5
+[DEBUG]  UDID: A90467E2-7314-46DB-91A8-E629FF8C1CBE
+[DEBUG]  Simulator type: iphone
 [DEBUG]  Simulator version: 9.2
 [INFO]   Building for device family: universal
 [DEBUG]  Setting Xcode target to Debug
@@ -80,7 +80,7 @@ Command
 [INFO]   Initializing the build directory
 [TRACE]  offline build file /var/folders/jq/f45s60gd5rsbdtnw_fllr1d00000gn/T/build-87fc99bd791f2187034676983436c14a18204db5.json
 [TRACE]  online 1
-[TRACE]  optimizing build, last build was 17747.387 sec ago
+[TRACE]  optimizing build, last build was 32701.541 sec ago
 [INFO]   Creating Xcode project
 [TRACE]  Removing pre-compile phase
 [TRACE]  No native module libraries to add
@@ -169,7 +169,7 @@ Command
 [DEBUG]  Copying CSS files
 [INFO]   Processing JavaScript files
 [DEBUG]  Overwriting /Users/jacobcarter/Documents/AVF/Project2/Resources/api.js => /Users/jacobcarter/Documents/AVF/Project2/build/iphone/build/Products/Debug-iphonesimulator/Project2.app/api.js
-[DEBUG]  Overwriting /Users/jacobcarter/Documents/AVF/Project2/Resources/app.js => /Users/jacobcarter/Documents/AVF/Project2/build/iphone/build/Products/Debug-iphonesimulator/Project2.app/app.js
+[DEBUG]  Overwriting /var/folders/jq/f45s60gd5rsbdtnw_fllr1d00000gn/T/liveview.js => /Users/jacobcarter/Documents/AVF/Project2/build/iphone/build/Products/Debug-iphonesimulator/Project2.app/app.js
 [DEBUG]  Overwriting /Users/jacobcarter/Documents/AVF/Project2/Resources/database.js => /Users/jacobcarter/Documents/AVF/Project2/build/iphone/build/Products/Debug-iphonesimulator/Project2.app/database.js
 [DEBUG]  Overwriting /Users/jacobcarter/Documents/AVF/Project2/Resources/geo.js => /Users/jacobcarter/Documents/AVF/Project2/build/iphone/build/Products/Debug-iphonesimulator/Project2.app/geo.js
 [DEBUG]  Overwriting /Users/jacobcarter/Documents/AVF/Project2/Resources/ui.js => /Users/jacobcarter/Documents/AVF/Project2/build/iphone/build/Products/Debug-iphonesimulator/Project2.app/ui.js
@@ -188,20 +188,20 @@ Command
 [INFO]   Removing files
 [DEBUG]  Removing empty directories
 [INFO]   Skipping xcodebuild
-[INFO]   Finished building the application in 1s 45ms
+[INFO]   Finished building the application in 968ms
 [INFO]   Launching iOS Simulator
-[TRACE]  [ioslib] Selected iOS Simulator: iPad 2
-[TRACE]  [ioslib]   UDID    = 4728B2D0-5FD3-4EC0-9052-95B23AD786A4
+[TRACE]  [ioslib] Selected iOS Simulator: iPhone 5
+[TRACE]  [ioslib]   UDID    = A90467E2-7314-46DB-91A8-E629FF8C1CBE
 [TRACE]  [ioslib]   iOS     = 9.2
 [TRACE]  [ioslib] Autoselected Xcode: 7.2.1
-[TRACE]  [ioslib] Removing old log file: /Users/jacobcarter/Library/Developer/CoreSimulator/Devices/4728B2D0-5FD3-4EC0-9052-95B23AD786A4/data/Containers/Data/Application/98ED17CF-7848-49BA-9C65-BD3CC4D3F36E/Documents/1e57e21a-34d8-4e2d-9555-57f1d16b723f.log
-[TRACE]  [ioslib] iPad 2 Simulator already running with the correct udid
-[TRACE]  [ioslib] Tailing iPad 2 Simulator system log: /Users/jacobcarter/Library/Logs/CoreSimulator/4728B2D0-5FD3-4EC0-9052-95B23AD786A4/system.log
+[TRACE]  [ioslib] Removing old log file: /Users/jacobcarter/Library/Developer/CoreSimulator/Devices/A90467E2-7314-46DB-91A8-E629FF8C1CBE/data/Containers/Data/Application/FF92598E-F2A7-46D8-86A5-6AC02E66D7F4/Documents/1e57e21a-34d8-4e2d-9555-57f1d16b723f.log
+[TRACE]  [ioslib] iPhone 5 Simulator already running with the correct udid
+[TRACE]  [ioslib] Tailing iPhone 5 Simulator system log: /Users/jacobcarter/Library/Logs/CoreSimulator/A90467E2-7314-46DB-91A8-E629FF8C1CBE/system.log
 [TRACE]  [ioslib] Running: osascript "/Users/jacobcarter/Library/Application Support/Titanium/mobilesdk/osx/5.2.0.GA/node_modules/ioslib/lib/sim_focus.scpt" "Simulator"
-[TRACE]  [ioslib] iPad 2 Simulator successfully focused
-[TRACE]  [ioslib] Running: /Applications/Xcode.app/Contents/Developer/usr/bin/simctl install 4728B2D0-5FD3-4EC0-9052-95B23AD786A4 /Users/jacobcarter/Documents/AVF/Project2/build/iphone/build/Products/Debug-iphonesimulator/Project2.app
+[TRACE]  [ioslib] iPhone 5 Simulator successfully focused
+[TRACE]  [ioslib] Running: /Applications/Xcode.app/Contents/Developer/usr/bin/simctl install A90467E2-7314-46DB-91A8-E629FF8C1CBE /Users/jacobcarter/Documents/AVF/Project2/build/iphone/build/Products/Debug-iphonesimulator/Project2.app
 [TRACE]  [ioslib] App installed
-[TRACE]  [ioslib] Running: /Applications/Xcode.app/Contents/Developer/usr/bin/simctl launch 4728B2D0-5FD3-4EC0-9052-95B23AD786A4 com.carter.project2
+[TRACE]  [ioslib] Running: /Applications/Xcode.app/Contents/Developer/usr/bin/simctl launch A90467E2-7314-46DB-91A8-E629FF8C1CBE com.carter.project2
 [TRACE]  [ioslib] App launched
 [TRACE]  [Project2] assertion failed: 15C50 13C75: libxpc.dylib + 71630 [60B4AA4E-F817-3C94-B4DA-0620CC9847B6]: 0x7d
-[TRACE]  [ioslib] Found application log file: /Users/jacobcarter/Library/Developer/CoreSimulator/Devices/4728B2D0-5FD3-4EC0-9052-95B23AD786A4/data/Containers/Data/Application/7D8DED29-9EC7-41F9-9AE9-EE15BCBB6DE1/Documents/1e57e21a-34d8-4e2d-9555-57f1d16b723f.log
+[TRACE]  [ioslib] Found application log file: /Users/jacobcarter/Library/Developer/CoreSimulator/Devices/A90467E2-7314-46DB-91A8-E629FF8C1CBE/data/Containers/Data/Application/2A7FF1CE-8F1D-4255-BEB2-6E8F783C8EFF/Documents/1e57e21a-34d8-4e2d-9555-57f1d16b723f.log
