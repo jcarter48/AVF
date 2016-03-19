@@ -8,6 +8,7 @@ if (Ti.Network.online) {
 	console.log("...");
 } else {
 	alert("no network");
+	//read from LS
 	var dbModule = require("database");
 	dbModule.read();
 
