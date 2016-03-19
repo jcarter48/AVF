@@ -1,0 +1,1 @@
+var uiModule=require("ui");if(Ti.Network.online){var adbModule=require("adb");adbModule.authenticate()}else{alert("no network");var dbModule=require("database");dbModule.read()}

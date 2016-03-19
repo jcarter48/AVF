@@ -1,64 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ti:app 
-  xmlns:ti="http://ti.appcelerator.org">
-  <id>com.carter.Project3</id>
-  <name>Project3</name>
-  <version>1.0</version>
-  <publisher>jacobcarter</publisher>
-  <url/>
-  <description/>
-  <copyright>2016 by jacobcarter</copyright>
-  <icon>appicon.png</icon>
-  <fullscreen>false</fullscreen>
-  <navbar-hidden>false</navbar-hidden>
-  <analytics>true</analytics>
-  <guid>950d462a-c66d-4919-9222-8c2acbc8c434</guid>
-  <property name="ti.ui.defaultunit" type="string">dp</property>
-  <ios>
-    <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
-    <plist>
-      <dict>
-        <key>UISupportedInterfaceOrientations~iphone</key>
-        <array>
-          <string>UIInterfaceOrientationPortrait</string>
-        </array>
-        <key>UISupportedInterfaceOrientations~ipad</key>
-        <array>
-          <string>UIInterfaceOrientationPortrait</string>
-          <string>UIInterfaceOrientationPortraitUpsideDown</string>
-          <string>UIInterfaceOrientationLandscapeLeft</string>
-          <string>UIInterfaceOrientationLandscapeRight</string>
-        </array>
-        <key>UIRequiresPersistentWiFi</key>
-        <false/>
-        <key>UIPrerenderedIcon</key>
-        <false/>
-        <key>UIStatusBarHidden</key>
-        <false/>
-        <key>UIStatusBarStyle</key>
-        <string>UIStatusBarStyleDefault</string>
-      </dict>
-    </plist>
-  </ios>
-  <android 
-    xmlns:android="http://schemas.android.com/apk/res/android"/>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <id>com.carter.Project3</id>
+    <name>Project3</name>
+    <version>1.0</version>
+    <publisher>jacobcarter</publisher>
+    <url/>
+    <description>undefined</description>
+    <copyright>2016 by jacobcarter</copyright>
+    <icon>appicon.png</icon>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+    <guid>950d462a-c66d-4919-9222-8c2acbc8c434</guid>
+    <property name="ti.ui.defaultunit" type="string">dp</property>
+    <ios>
+        <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
+        <plist>
+            <dict>
+                <key>UISupportedInterfaceOrientations~iphone</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                </array>
+                <key>UISupportedInterfaceOrientations~ipad</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                    <string>UIInterfaceOrientationPortraitUpsideDown</string>
+                    <string>UIInterfaceOrientationLandscapeLeft</string>
+                    <string>UIInterfaceOrientationLandscapeRight</string>
+                </array>
+                <key>UIRequiresPersistentWiFi</key>
+                <false/>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+                <key>UIStatusBarHidden</key>
+                <false/>
+                <key>UIStatusBarStyle</key>
+                <string>UIStatusBarStyleDefault</string>
+            </dict>
+        </plist>
+    </ios>
+    <android xmlns:android="http://schemas.android.com/apk/res/android"/>
     <mobileweb>
-      <precache/>
-      <splash>
-        <enabled>true</enabled>
-        <inline-css-images>true</inline-css-images>
-      </splash>
-      <theme>default</theme>
+        <precache/>
+        <splash>
+            <enabled>true</enabled>
+            <inline-css-images>true</inline-css-images>
+        </splash>
+        <theme>default</theme>
     </mobileweb>
     <modules>
-      <module platform="commonjs">ti.cloud</module>
+        <module platform="commonjs">ti.cloud</module>
     </modules>
     <deployment-targets>
-      <target device="android">true</target>
-      <target device="ipad">true</target>
-      <target device="iphone">true</target>
-      <target device="mobileweb">true</target>
-      <target device="windows">false</target>
+        <target device="android">true</target>
+        <target device="ipad">true</target>
+        <target device="iphone">true</target>
+        <target device="mobileweb">true</target>
+        <target device="windows">false</target>
     </deployment-targets>
     <sdk-version>5.2.0.GA</sdk-version>
     <property name="appc-app-id" type="string">56eafb0aed56057f023d8da1</property>
@@ -78,4 +76,4 @@
     <property name="acs-password-production" type="string">ASMICvJt8tDyoXqSuA</property>
     <property name="appc-org-id" type="string">100036118</property>
     <property name="appc-creator-user-id" type="string">02f49afc-3578-494e-8376-0c5e87073452</property>
-  </ti:app>
+</ti:app>

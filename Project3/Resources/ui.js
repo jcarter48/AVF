@@ -33,27 +33,46 @@ var format2 = {
 win.add(viewContainer);
 win.open();
 
+//textfield
+var textField = Ti.UI.createTextField({
+  borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+  color: '#000',
+  width: 250, height: 60
+});
+viewContainer.add(textField);
+
+//button
+var textButton = Ti.UI.createButton({
+	title : 'GO!',
+	height: 60, width: 250
+});
+
+//click event textfield.value
+textButton.addEventListener('click', function() {
+	//console.log(textField.value);
+	var apiModule = require("api");
+	apiModule.getData1(textField.value);
+	//alert('I was clicked!');
+});
+
+viewContainer.add(textButton);
+//require api
+//fire getData
+//pass textfield.value
+
 var buildUI = function(dbInfo) {
-// var textField = Ti.UI.createTextField({
-  // borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
-  // color: '#336699',
-  // top: 10, left: 10,
-  // width: 250, height: 60
-// });
-	//viewContainer.add(textField);
-	//console.log(dbInfo.length);
+	//console.log(dbInfo, "...");
 	for (var i = 0,
-		j = dbInfo.challenger.length; i < j; i++) {
+		j = dbInfo.length; i < j; i++) {
 		var label = Ti.UI.createLabel({
-			text : dbInfo.challenger[i].name + " , " + dbInfo.challenger[i].leaguePoints + "lp, W/L:" + dbInfo.challenger[i].wins + "/" + dbInfo.challenger[i].losses,
+			text : dbInfo[i].name + "    " + dbInfo[i].leaguePoints + "lp    W/L:" + dbInfo[i].wins + "/" + dbInfo[i].losses,
 			//color : "#fff",
 			font : {
 				fontSize : 20
 			},
 			bottom : 20
 		});
-		viewContainer.add(label);
-
 }
+viewContainer.add(label);
 };
 exports.buildUI = buildUI;
