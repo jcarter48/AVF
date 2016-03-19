@@ -1,3 +1,3 @@
-FIND_BAR_DECORATOR_FIND_ENTRIES=\#\n\#Sat Mar 12 19\:13\:20 EST 2016\n9\=redditDB\n8\=redditTBL\n7\=netModule\n6\=require\n5\=apiInfo\n4\=weatherArray\n3\=weatherObj\n2\=...\n1\=viewContainer\n0\=size\n
-FIND_BAR_DECORATOR_REPLACE_ENTRIES=\#\n\#Sat Mar 12 18\:52\:15 EST 2016\n4\=weather\n3\=weatherDB\n2\=weatherTBL\n1\=wObj\n0\=viewContainer1\n
+FIND_BAR_DECORATOR_FIND_ENTRIES=\#\n\#Sat Mar 19 04\:22\:11 EDT 2016\n9\=url\n8\=riot\n7\=weather\n6\=JSON.stringify\n5\=riotInfo\n4\=rObj\n3\=build\n2\=leaguePoints \\\: riotInfo.entries[i].leaguePoints,\\n\\t\\t\\t\\twins \\\: riotInfo.entries[i].wins,\\n\\t\\t\\t\\tlosses \\\: riotInfo.entries[i].losses,\\n\\t\\t\\t\\thotStreak \\\: riotInfo.entries[i].isHotStreak,\\n\\t\\t\\t\\tveteran \\\: riotInfo.entries[i].isVeteran,\\n\\t\\t\\t\\tfreshBlood \\\: riotInfo.entries[i].isFreshBlood,\\n\\t\\t\\t\\tinactive \\\: riotInfo.entries[i].isInactive\n1\=require\n0\=console\n
+FIND_BAR_DECORATOR_REPLACE_ENTRIES=\#\n\#Sat Mar 19 04\:06\:23 EDT 2016\n8\=weather\n7\=weatherDB\n6\=weatherTBL\n5\=wObj\n4\=viewContainer1\n3\=windSpeed\n2\=riot\n1\=apiInfo\n0\=dbInfo\n
 eclipse.preferences.version=1

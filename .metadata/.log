@@ -21140,3 +21140,121 @@ java.io.UTFDataFormatException: Unexpected byte value '-1' at index 1, reading s
 	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
 	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.index.core 4 0 2016-03-19 11:26:02.913
+!MESSAGE (Build 4.5.0.201602170821) [ERROR]  /Users/jacobcarter/Documents/AVF/.metadata/.plugins/com.aptana.index.core/3140802719.index (No such file or directory)
+!STACK 0
+java.io.FileNotFoundException: /Users/jacobcarter/Documents/AVF/.metadata/.plugins/com.aptana.index.core/3140802719.index (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at com.aptana.internal.index.core.DiskIndex.readAllDocumentNames(DiskIndex.java:1001)
+	at com.aptana.internal.index.core.DiskIndex.mergeWith(DiskIndex.java:867)
+	at com.aptana.index.core.Index.save(Index.java:698)
+	at com.aptana.index.core.Index.save(Index.java:671)
+	at com.aptana.core.internal.build.IndexBuildParticipant.buildEnding(IndexBuildParticipant.java:84)
+	at com.aptana.core.internal.build.LazyBuildParticipant.buildEnding(LazyBuildParticipant.java:67)
+	at com.aptana.core.build.UnifiedBuilder.buildEnding(UnifiedBuilder.java:230)
+	at com.aptana.core.build.UnifiedBuilder.build(UnifiedBuilder.java:201)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.aptana.index.core 4 0 2016-03-19 11:26:03.920
+!MESSAGE (Build 4.5.0.201602170821) [ERROR]  /Users/jacobcarter/Documents/AVF/.metadata/.plugins/com.aptana.index.core/3140802719.index (No such file or directory)
+!STACK 0
+java.io.FileNotFoundException: /Users/jacobcarter/Documents/AVF/.metadata/.plugins/com.aptana.index.core/3140802719.index (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at com.aptana.internal.index.core.DiskIndex.readAllDocumentNames(DiskIndex.java:1001)
+	at com.aptana.internal.index.core.DiskIndex.mergeWith(DiskIndex.java:867)
+	at com.aptana.index.core.Index.save(Index.java:698)
+	at com.aptana.index.core.Index.save(Index.java:671)
+	at com.aptana.core.internal.build.IndexBuildParticipant.buildEnding(IndexBuildParticipant.java:84)
+	at com.aptana.core.internal.build.LazyBuildParticipant.buildEnding(LazyBuildParticipant.java:67)
+	at com.aptana.core.build.UnifiedBuilder.buildEnding(UnifiedBuilder.java:230)
+	at com.aptana.core.build.UnifiedBuilder.build(UnifiedBuilder.java:201)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.ui.ide 4 4 2016-03-19 11:27:43.712
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 4 1 2016-03-19 11:27:43.714
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 4 568 2016-03-19 11:27:43.714
+!MESSAGE Could not write metadata for '/Project3'.
+!STACK 0
+java.io.FileNotFoundException: /Users/jacobcarter/Documents/AVF/.metadata/.plugins/org.eclipse.core.resources/.projects/Project3/.markers (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.eclipse.core.internal.localstore.SafeFileOutputStream.<init>(SafeFileOutputStream.java:51)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSave(SaveManager.java:1635)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSave(SaveManager.java:1716)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1177)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2333)
+	at com.appcelerator.titanium.rcp.IDEWorkbenchAdvisor$4.run(IDEWorkbenchAdvisor.java:529)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+!SESSION 2016-03-19 11:28:46.421 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_73
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/jacobcarter/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/jacobcarter/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2016-03-19 11:28:59.045
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-03-19 11:29:09.957
+!MESSAGE (Build 4.5.0.201602170821) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/mobilesdk/osx
+
+!ENTRY com.appcelerator.titanium.core 4 0 2016-03-19 11:29:09.960
+!MESSAGE (Build 4.5.0.201602170821) [ERROR]  Location to be watched doesn't exist: /Library/Application Support/Titanium/modules
+
+!ENTRY com.appcelerator.titanium.ui.ide 4 0 2016-03-19 11:29:19.771
+!MESSAGE (Build 4.5.0.201602170821) [ERROR] com.appcelerator.titanium.core/debug/dashboard Unknown SDK windows
+
+!ENTRY com.aptana.samples 4 0 2016-03-19 11:29:19.773
+!MESSAGE (Build 4.5.0.201602170821) [ERROR]  Unable to retrieve the icon at null for sample Apple WatchOS2
+
+!ENTRY com.aptana.samples 4 0 2016-03-19 11:29:19.776
+!MESSAGE (Build 4.5.0.201602170821) [ERROR]  Unable to retrieve the icon at null for sample iOS 9 App Search
+
+!ENTRY com.aptana.samples 4 0 2016-03-19 11:29:19.777
+!MESSAGE (Build 4.5.0.201602170821) [ERROR]  Unable to retrieve the icon at null for sample Ti SDK 4.1 Example App
+
+!ENTRY com.aptana.samples 4 0 2016-03-19 11:29:19.778
+!MESSAGE (Build 4.5.0.201602170821) [ERROR]  Unable to retrieve the icon at null for sample Employee Directory
+
+!ENTRY com.aptana.samples 4 0 2016-03-19 11:29:19.780
+!MESSAGE (Build 4.5.0.201602170821) [ERROR]  Unable to retrieve the icon at null for sample Movies
+
+!ENTRY com.aptana.samples 4 0 2016-03-19 11:29:19.781
+!MESSAGE (Build 4.5.0.201602170821) [ERROR]  Unable to retrieve the icon at null for sample Geocoder
+
+!ENTRY com.aptana.samples 4 0 2016-03-19 11:29:19.782
+!MESSAGE (Build 4.5.0.201602170821) [ERROR]  Unable to retrieve the icon at null for sample Rss Reader
