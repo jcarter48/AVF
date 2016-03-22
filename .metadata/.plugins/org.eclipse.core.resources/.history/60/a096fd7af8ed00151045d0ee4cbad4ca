@@ -1,0 +1,126 @@
+var dbModule = require("database");
+//getData 3 for recent matches
+var getData3 = function(x5) {
+
+	var url = "https://na.api.pvp.net/api/lol/na/v1.3/game/by-summoner/27688858/recent?api_key=0ae1d37e-0440-419e-a952-c827eec43d86";
+
+	var onLoad = function() {
+
+		var riotInfo = JSON.parse(this.responseText);
+		
+		for (var n in riotInfo) {
+			console.log(riotInfo[n][0].name);
+		};
+		//console.log(riotInfo.entries[0].playerOrTeamName);
+		
+		var riotArray = [];
+	
+		for (var i = 0,
+		    j = riotInfo.entries.length; i < j; i++) {
+			riotArray.push({
+				name : riotInfo.entries[i].playerOrTeamName,
+				division : riotInfo.entries[i].division,
+				leaguePoints : riotInfo.entries[i].leaguePoints,
+				wins : riotInfo.entries[i].wins,
+				losses : riotInfo.entries[i].losses,
+				hotStreak : riotInfo.entries[i].isHotStreak,
+				veteran : riotInfo.entries[i].isVeteran,
+				freshBlood : riotInfo.entries[i].isFreshBlood,
+				inactive : riotInfo.entries[i].isInactive
+			});
+		}
+		riotObj.challenger = riotArray;
+	};
+
+	var onError = function(x6) {
+		console.log("error getting data", x6.error);
+	};
+
+	var xhr = Ti.Network.createHTTPClient({
+		onload : onLoad,
+		onerror : onError,
+		timeout : 3000
+	});
+
+	xhr.open("GET", url);
+	xhr.send();
+};
+
+//getData 2 for summoner id
+var getData2 = function(x3) {
+console.log("x3", x3);
+	var url = "https://na.api.pvp.net/api/lol/na/v2.5/league/by-summoner/27688858/entry?api_key=0ae1d37e-0440-419e-a952-c827eec43d86";
+
+	var onLoad = function() {
+
+		var riotInfo = JSON.parse(this.responseText);
+		
+		for (var n in JSON) {
+			console.log(JSON[n][0].name);
+		};
+		
+		var riotObj = {
+			// summoner : riotInfo.entries.playerOrTeamName,
+			// queue : riotInfo.queue,
+			// name : riotInfo.name,
+			// tier : riotInfo.tier,
+			// division : riotInfo.entries.division,
+			// leaguePoints : riotInfo.entries.leaguePoints,
+			// wins : riotInfo.entries.wins,
+			// losses : riotInfo.entries.losses,
+			// streak : riotInfo.entries.isHotStreak,
+			// veteran : riotInfo.entries.isVeteran,
+			// new : riotInfo.entries.isFreshBlood,
+			// inactive : riotInfo.entries.isInactive
+		};
+		getData3(riotObj);
+		dbModule.save(riotObj);
+		adbModule.saveCloud(riotObj);
+
+	};
+
+	var onError = function(x4) {
+		console.log("error getting data", x4.error);
+	};
+
+	var xhr = Ti.Network.createHTTPClient({
+		onload : onLoad,
+		onerror : onError,
+		timeout : 3000
+	});
+
+	xhr.open("GET", url);
+	xhr.send();
+};
+
+
+//catch textfield value
+var getData1 = function(x1) {
+	//console.log(x1);
+	var url = "https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/" + x1 + "/?api_key=0ae1d37e-0440-419e-a952-c827eec43d86";
+	
+	var onLoad = function() {
+
+		var riotInfo = JSON.parse(this.responseText);
+		for (var n in riotInfo) {
+			console.log(riotInfo[n].id);
+			getData2(riotInfo[n].id);
+		};
+		//console.log(riotInfo);
+		//console.log(riotInfo.id);
+	};
+
+	var onError = function(x2) {
+		console.log("error getting data", x2.error);
+	};
+
+	var xhr = Ti.Network.createHTTPClient({
+		onload : onLoad,
+		onerror : onError,
+		timeout : 3000
+	});
+
+	xhr.open("GET", url);
+	xhr.send();
+};
+exports.getData1 = getData1;

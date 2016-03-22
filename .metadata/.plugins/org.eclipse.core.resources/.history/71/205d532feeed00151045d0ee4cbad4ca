@@ -1,0 +1,69 @@
+Ti.UI.setBackgroundColor("#ffffff");
+var win = Ti.UI.createWindow({
+	backgroundColor : "#fff",
+	//backgroundImage : "background.png",
+	//backgroundRepeat : "repeat-y",
+	//layout : "vertical",
+	top : 20
+});
+
+var bb1 = Titanium.UI.createButtonBar({
+    labels:['One', 'Two'],
+    backgroundColor:'#336699',
+    top:20,
+    style:Titanium.UI.iPhone.SystemButtonStyle.BAR,
+    height:25,
+    width:200
+});
+
+win.add(bb1);
+var viewContainer = Ti.UI.createScrollView({
+	layout : "vertical",
+	//top : 10,
+	showVerticalScrollIndicator : true
+});
+
+var format1 = {
+	text : "...",
+	color : "#ffffff",
+	font : {
+		fontSize : 32
+	}
+};
+
+var format2 = {
+	text : "...",
+	color : "#ffffff",
+	font : {
+		fontSize : 16
+	}
+};
+
+viewContainer.add(bb1);
+win.add(viewContainer);
+win.open();
+
+var buildUI = function(dbInfo) {
+// var textField = Ti.UI.createTextField({
+  // borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+  // color: '#336699',
+  // top: 10, left: 10,
+  // width: 250, height: 60
+// });
+	//viewContainer.add(textField);
+	//console.log(dbInfo.length);
+	for (var i = 0,
+		j = dbInfo.challenger.length; i < j; i++) {
+		var label = Ti.UI.createLabel({
+			text : dbInfo.challenger[i].name + "    " + dbInfo.challenger[i].leaguePoints + "lp    W/L:" + dbInfo.challenger[i].wins + "/" + dbInfo.challenger[i].losses,
+			//color : "#fff",
+			font : {
+				fontSize : 20
+			},
+			bottom : 20
+		});
+		viewContainer.add(label);
+
+}
+};
+exports.buildUI = buildUI;

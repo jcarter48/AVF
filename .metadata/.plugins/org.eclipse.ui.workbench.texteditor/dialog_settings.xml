@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="console" key="selection"/>
+		<item value="onError" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="console"/>
-			<item value="require"/>
-			<item value="leaguePoints : riotInfo.entries[i].leaguePoints,&#x0A;&#x09;&#x09;&#x09;&#x09;wins : riotInfo.entries[i].wins,&#x0A;&#x09;&#x09;&#x09;&#x09;losses : riotInfo.entries[i].losses,&#x0A;&#x09;&#x09;&#x09;&#x09;hotStreak : riotInfo.entries[i].isHotStreak,&#x0A;&#x09;&#x09;&#x09;&#x09;veteran : riotInfo.entries[i].isVeteran,&#x0A;&#x09;&#x09;&#x09;&#x09;freshBlood : riotInfo.entries[i].isFreshBlood,&#x0A;&#x09;&#x09;&#x09;&#x09;inactive : riotInfo.entries[i].isInactive"/>
-			<item value="build"/>
-			<item value="rObj"/>
+			<item value="onError"/>
+			<item value="getData1"/>
+			<item value="error"/>
+			<item value="http"/>
+			<item value="..."/>
 			<item value="riotInfo"/>
-			<item value="JSON.stringify"/>
-			<item value="weather"/>
+			<item value="challenger"/>
+			<item value="streak"/>
 		</list>
 		<list key="replacehistory">
 		</list>

@@ -1,5 +1,5 @@
 =run
-LAST_LAUNCH_TIMESTAMP=1457830480546
+LAST_LAUNCH_TIMESTAMP=1458604288439
 Lab1\:launchMode=run
 Lab1\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.70F9D705-3328-4D94-89B1-D6E7473B1383
 Lecture1\:launchMode=run
@@ -16,6 +16,8 @@ Project1\:launchMode=run
 Project1\:launchShortcut=com.appcelerator.titanium.mobile.ui.android.simulator.launchShortcut.Google Nexus 5X
 Project2\:launchMode=run
 Project2\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.A90467E2-7314-46DB-91A8-E629FF8C1CBE
+Project3\:launchMode=run
+Project3\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.ipad.launchShortcut.4728B2D0-5FD3-4EC0-9052-95B23AD786A4
 eclipse.preferences.version=1
 preference.show.console.onError=false
 preference.studio.perspective.version=103

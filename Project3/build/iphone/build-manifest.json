@@ -3166,9 +3166,9 @@
 			"size": 306760
 		},
 		"Classes/ApplicationRouting.m": {
-			"hash": "55e1b1bfd79f7b5d45060a58e9b8ec7e",
-			"mtime": "2016-03-19T21:23:11.000Z",
-			"size": 180091
+			"hash": "fb26d965d8eea14f381c9abf3a02d19d",
+			"mtime": "2016-02-20T16:09:30.000Z",
+			"size": 493
 		},
 		"modules/ui/images/badge.png": {
 			"hash": "4c5e51e328d337a135f513bc1e958c82",
@@ -3186,18 +3186,16 @@
 			"size": 3126
 		}
 	},
-	"target": "device",
-	"deployType": "test",
+	"target": "simulator",
+	"deployType": "development",
 	"sdkVersion": "5.2.0.GA",
 	"iosSdkVersion": "9.2",
 	"deviceFamily": "universal",
 	"iosSdkPath": "/Users/jacobcarter/Library/Application Support/Titanium/mobilesdk/osx/5.2.0.GA/iphone",
 	"tiCoreHash": "5710cda7b179a3c8391cc94011e308de",
-	"developerName": "hepzat@live.com (3AKQELFDU6)",
 	"modulesHash": "7fb655db1d51a26b74a2778ab4a02a6b",
 	"modulesNativeHash": "d41d8cd98f00b204e9800998ecf8427e",
 	"gitHash": "384775e",
-	"ppUuid": "f2cccb17-5c1d-439e-9d9c-93228337cb45",
 	"forceCopy": false,
 	"forceCopyAll": false,
 	"name": "Project3",
@@ -3210,8 +3208,8 @@
 	"copyright": "2016 by jacobcarter",
 	"guid": "950d462a-c66d-4919-9222-8c2acbc8c434",
 	"useAppThinning": false,
-	"skipJSMinification": false,
-	"encryptJS": true,
+	"skipJSMinification": true,
+	"encryptJS": false,
 	"useJSCore": false,
 	"runOnMainThread": false,
 	"useAutoLayout": false

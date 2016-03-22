@@ -1,8 +1,0 @@
-"/Users/jacobcarter/Documents/AVF/Project2/build/android/gen/android/support/v7/appcompat/R.java"
-"/Users/jacobcarter/Documents/AVF/Project2/build/android/gen/android/support/v7/cardview/R.java"
-"/Users/jacobcarter/Documents/AVF/Project2/build/android/gen/com/carter/project2/AssetCryptImpl.java"
-"/Users/jacobcarter/Documents/AVF/Project2/build/android/gen/com/carter/project2/Project2Activity.java"
-"/Users/jacobcarter/Documents/AVF/Project2/build/android/gen/com/carter/project2/Project2AppInfo.java"
-"/Users/jacobcarter/Documents/AVF/Project2/build/android/gen/com/carter/project2/Project2Application.java"
-"/Users/jacobcarter/Documents/AVF/Project2/build/android/gen/com/carter/project2/R.java"
-"/Users/jacobcarter/Documents/AVF/Project2/build/android/gen/ti/modules/titanium/ui/R.java"

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.appcelerator.titanium.mobile.ui.ios.installer.launchConfigurationType">
+<booleanAttribute key="ATTR_MINIFY" value="true"/>
+<stringAttribute key="ATTR_PROJECT_NAME" value="Project3"/>
+<stringAttribute key="ATTR_TITANIUM_DEPLOY_TYPE" value="development"/>
+<booleanAttribute key="ATTR_UPLOAD_DEBUG_SYMBOLS" value="false"/>
+<stringAttribute key="appid" value="com.carter.Project3"/>
+<stringAttribute key="certificate" value="hepzat@live.com (3AKQELFDU6)"/>
+<stringAttribute key="debug_config" value="::1458421123681:192.168.58.1,192.168.57.1,10.63.35.40"/>
+<stringAttribute key="debug_hosts" value="192.168.58.1,192.168.57.1,10.63.35.40"/>
+<stringAttribute key="device_id" value="0504ddb9baf4b26125ae73005fd99b92a7e2c675"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/Project3"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.debug.core.capture_output" value="true"/>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_LAUNCH_IN_BACKGROUND" value="true"/>
+<stringAttribute key="process_factory_id" value="com.appcelerator.titanium.ui.logLevelFilteringProcessFactory"/>
+<stringAttribute key="sdk_version" value="9.2"/>
+<stringAttribute key="uuid" value="f2cccb17-5c1d-439e-9d9c-93228337cb45"/>
+</launchConfiguration>

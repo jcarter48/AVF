@@ -1,0 +1,46 @@
+var Cloud = require("ti.cloud");
+Cloud.debug = true;
+
+var authenticate = function() {
+	Cloud.Users.login({
+		login : "admin",
+		password : "admin"
+	}, function(e) {
+		if (e.success) {
+			console.log("it worked");
+			// var apiModule = require("api");
+			// apiModule.getData1();
+		} else {
+			alert("authentication error " + e.message);
+		}
+	});
+
+};
+var saveCloud = function(apiInfo) {
+	console.log(apiInfo, ".........");
+	
+	//for (var i = 0, j = apiInfo.recent.length; i < j; i++) {
+	for (var i = 0, j = apiInfo.length; i < j; i++) {
+		Cloud.Objects.create({
+			classname : "recent",
+			fields : {
+				kills : apiInfo.games[i].championsKilled,
+				deaths : apiInfo.games[i].numDeaths,
+				assists : apiInfo.games[i].assists,
+				cs : apiInfo.games[i].minionsKilled,
+				playTime : apiInfo.games[i].timePlayed,
+				win : apiInfo.games[i].win
+			}
+		}, function(e) {
+			if (e.success) {
+				//console.log("it worked");
+				//console.log(save);
+			} else {
+				alert("authentication error " + e.message);
+			}
+
+		});
+	}
+};
+exports.authenticate = authenticate;
+exports.saveCloud = saveCloud;
