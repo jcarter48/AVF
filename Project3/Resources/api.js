@@ -1,9 +1,10 @@
 var dbModule = require("database");
+// var adbModule = require("adb");
 //getData 3 for recent matches
 var getData3 = function(obj, x5) {
 
-	var url = "https://na.api.pvp.net/api/lol/na/v1.3/game/by-summoner/" + x5 + "/recent?api_key=95c01747-6566-4a0b-b6ee-cabad382a1df";
-
+	var url = "https://na.api.pvp.net/api/lol/na/v1.3/game/by-summoner/" + x5 + "/recent?api_key=d45e5d73-424f-49a8-8be9-d60f3f9684c7";
+	//console.log("url", url);
 	var onLoad = function() {
 
 		var riotInfo = JSON.parse(this.responseText);
@@ -18,20 +19,23 @@ var getData3 = function(obj, x5) {
 		for (var i = 0,
 		    j = riotInfo.games.length; i < j; i++) {
 			riotArray.push({
-				kills : riotInfo.games[i].championsKilled,
-				deaths : riotInfo.games[i].numDeaths,
-				assists : riotInfo.games[i].assists,
-				cs : riotInfo.games[i].minionsKilled,
-				playTime : riotInfo.games[i].timePlayed,
-				win : riotInfo.games[i].win
+				kills : riotInfo.games[i].stats.championsKilled,
+				deaths : riotInfo.games[i].stats.numDeaths,
+				assists : riotInfo.games[i].stats.assists,
+				cs : riotInfo.games[i].stats.minionsKilled,
+				playTime : riotInfo.games[i].stats.timePlayed,
+				win : riotInfo.games[i].stats.win
 			});
 		}
 		//console.log(kills, "...");
-		obj.recent = riotArray;
+		obj.recent = riotArray;	
+		//console.log("obj", obj);	
+		dbModule.save(obj);
+		adbModule.saveCloud(obj);
 	};
 
 	var onError = function(x6) {
-		console.log("error getting data", x6.error);
+		console.log("error getting data x6: ", x6.error);
 	};
 
 	var xhr = Ti.Network.createHTTPClient({
@@ -47,7 +51,7 @@ var getData3 = function(obj, x5) {
 //getData 2 for summoner id
 var getData2 = function(x3) {
 //console.log("x3", x3);
-	var url = "https://na.api.pvp.net/api/lol/na/v2.5/league/by-summoner/" + x3 +"/entry?api_key=95c01747-6566-4a0b-b6ee-cabad382a1df";
+	var url = "https://na.api.pvp.net/api/lol/na/v2.5/league/by-summoner/" + x3 +"/entry?api_key=d45e5d73-424f-49a8-8be9-d60f3f9684c7";
 
 	var onLoad = function() {
 
@@ -73,13 +77,13 @@ var getData2 = function(x3) {
 		
 		
 		getData3(riotObj, x3);
-		dbModule.save(riotObj);
-		adbModule.saveCloud(riotObj);
+		// dbModule.save(riotObj);
+		// adbModule.saveCloud(riotObj);
 
 	};
 
 	var onError = function(x4) {
-		console.log("error getting data", x4.error);
+		console.log("error getting data x4: ", x4.error);
 	};
 
 	var xhr = Ti.Network.createHTTPClient({
@@ -97,7 +101,7 @@ var getData2 = function(x3) {
 var getData1 = function(x1) {
 	//console.log(x1, ".... x1");
 	
-	var url = "https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/" + x1 + "/?api_key=95c01747-6566-4a0b-b6ee-cabad382a1df";
+	var url = "https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/" + x1 + "/?api_key=d45e5d73-424f-49a8-8be9-d60f3f9684c7";
 	
 	var onLoad = function() {
 
@@ -108,7 +112,7 @@ var getData1 = function(x1) {
 		for (var n in riotInfo) {
 			//console.log(riotInfo[n].id);
 			getData2(riotInfo[n].id);
-			getData3(riotInfo[n].id);
+		//	getData3(riotInfo[n].id);
 		};
 		//console.log(riotInfo);
 		//console.log(riotInfo.id);
@@ -116,7 +120,7 @@ var getData1 = function(x1) {
 	};
 
 	var onError = function(x2) {
-		console.log("error getting data", x2.error);
+		console.log("error getting data x2:", x2.error);
 	};
 
 	var xhr = Ti.Network.createHTTPClient({

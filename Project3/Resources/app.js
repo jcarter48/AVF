@@ -1,8 +1,11 @@
 var uiModule = require("ui"); 
 
+
 if (Ti.Network.online){
 	var adbModule = require("adb");
 	adbModule.authenticate();
+	// var dbModule = require("database");
+	// dbModule.read();
 } else {
 	alert("no network");
 	//read from LS

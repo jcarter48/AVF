@@ -1,134 +1,336 @@
 Ti.UI.setBackgroundColor("#ffffff");
+
+//win for first page, input page
 var win = Ti.UI.createWindow({
-	backgroundColor : "#fff",
-	//backgroundImage : "background.png",
-	//backgroundRepeat : "repeat-y",
-	//layout : "vertical",
+	// backgroundColor: "#3f3",
+	backgroundImage : "background.png",
+	backgroundRepeat : "repeat",
+	layout : "vertical",
 	top : 20
 });
-
-var viewContainer = Ti.UI.createScrollView({
+var logo = Ti.UI.createImageView({
+	image : "logo.png",
+	top : 100
+});
+//videoPlayer
+var videoPlayer = Titanium.Media.createVideoPlayer({
+	top : 20,
+	backgroundColor : 'blue',
+	//autoplay : false,
+	height : 360,
+	width : 640,
+	mediaControlStyle : Titanium.Media.VIDEO_CONTROL_DEFAULT,
+	scalingMode : Titanium.Media.VIDEO_SCALING_ASPECT_FIT
+});
+//scrollview for first page
+var mainScroll = Ti.UI.createScrollView({
 	layout : "vertical",
+	// backgroundImage : "background.png",
+	backgroundRepeat : "repeat",
 	//top : 10,
+	// backgroundColor : "#fff",
 	showVerticalScrollIndicator : true
 });
+//scrollview for basic data
 
 var format1 = {
 	text : "...",
 	color : "#ffffff",
 	font : {
-		fontSize : 32
-	}
+		fontSize : 64
+	},
+	top : 10
 };
 
-var format2 = {
-	text : "...",
-	color : "#ffffff",
-	font : {
-		fontSize : 16
-	}
-};
-
-
-win.add(viewContainer);
+win.add(mainScroll);
 win.open();
-
 //textfield
 var textField = Ti.UI.createTextField({
-  borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
-  color: '#000',
-  width: 250, height: 60
+	borderStyle : Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	width : 250,
+	height : 60,
+	top : 20,
+	hintText : "Summmoner Name",
+	color : "#444349",
+	backgroundColor : "#ffffff",
+	borderRadius : 10
 });
-viewContainer.add(textField);
+
+mainScroll.add(logo);
+mainScroll.add(textField);
+//win.add(textField);
 
 //button
 var textButton = Ti.UI.createButton({
-	title : 'GO!',
-	height: 60, width: 250
+	title : 'Search!',
+	height : 60,
+	width : 150,
+	top : 20,
+	font : {
+		fontSize : 32
+	},
+	color : "#444349",
+	backgroundColor : "#ffffff",
+	borderRadius : 10
+
 });
 
-// Create a Label.
-var Label2 = Ti.UI.createLabel({
-	text : 'works!',
-});
 
-// Add to the parent view.
-
-//click event textfield.value
-textButton.addEventListener('click', function() {
-	//console.log(textField.value);
-	var apiModule = require("api");
-	apiModule.getData1(textField.value);
-	buildUI();
-	//alert('I was clicked!');
-});
-
-viewContainer.add(textButton);
-viewContainer.add(Label2);
+mainScroll.add(textButton);
+//win.add(textButton);
+videoPlayer.url = 'theBasics.mp4';
+//win.add(videoPlayer);
+mainScroll.add(videoPlayer);
 //require api
 //fire getData
 //pass textfield.value
 
-var summonerLbl = Ti.UI.createLabel(format2);
-var queueLbl = Ti.UI.createLabel(format2);
+//win for 2nd page for basic data ------------------------------2nd page
+var infoWin = Ti.UI.createWindow({
+	backgroundColor : "#900",
+	layout : "horizontal",
+	top : 0,
+	// backgroundImage : "background.png",
+	backgroundRepeat : "repeat",
+	zIndex : 1
+});
+var infoButton = Titanium.UI.createButton({
+	title : 'Stats',
+	color : "#444349",
+	backgroundColor : "#ffffff",
+	//top: 50,
+	width : 384,
+	height : 50,
+	//left: 150,
+	borderColor : "#444349",
+	borderWidth : 6,
+	font : {
+		fontSize : 24
+	}
+});
+var matchButton = Titanium.UI.createButton({
+	title : 'Recent Matches',
+	color : "#444349",
+	backgroundColor : "#ffffff",
+	//top: 50,
+	width : 384,
+	height : 50,
+	// right: 150,
+	borderColor : "#444349",
+	borderWidth : 6,
+	font : {
+		fontSize : 24
+	}
+});
+var buttonView = Ti.UI.createView({
+	layout : "horizontal",
+	width : 768,
+	height : "5%",
+	// borderColor : "#fff",
+	// borderWidth : 3,
+	zIndex: 3
+});
+
+buttonView.add(infoButton);
+buttonView.add(matchButton);
+
+var contentView = Ti.UI.createView({
+	layout : "vertical",
+	backgroundColor : "#ccc",
+	height: "90%",
+	zIndex : 2
+});
+var backButton = Ti.UI.createButton({
+	title: "Search another summoner!",
+	width: 200,
+	height: "5%",
+	bottom: 0,
+	left: 0,
+	color : "#444349",
+	backgroundColor : "#ffffff",
+	zIndex : 4
+});
+backButton.addEventListener("singletap", function(){
+	contentView.removeAllChildren();
+	infoWin.removeAllChildren();
+	infoWin.close();
+	win.open();
+	textField.value = "";
+});
+
+var summonerLbl = Ti.UI.createLabel(format1);
+var queueLbl = Ti.UI.createLabel(format1);
 var nameLbl = Ti.UI.createLabel(format1);
 var tierLbl = Ti.UI.createLabel(format1);
-var divisionLbl = Ti.UI.createLabel(format2);
-var leaguePointsLbl = Ti.UI.createLabel(format2);
 var winsLbl = Ti.UI.createLabel(format1);
-var lossesLbl = Ti.UI.createLabel(format1);
-var streakLbl = Ti.UI.createLabel(format1);
-var veteranLbl = Ti.UI.createLabel(format1);
-var newLbl = Ti.UI.createLabel(format1);
-var inactiveLbl = Ti.UI.createLabel(format1);
 
+var matchScroll = Ti.UI.createScrollView({
+	layout : "vertical",
+	top : 10,
+	showVerticalScrollIndicator : true,
+	// borderColor : "#090",
+	// backgroundColor : "#000",
+	// borderWidth : 3,
+	// height : 800
+});
+//scrollview for recent matches
+
+
+//click event textfield.value
+textButton.addEventListener('singletap', function() {
+	// alert(textField.value);
+	var apiModule = require("api");
+	apiModule.getData1(textField.value);
+	// win.close();
+	// infoWin.open();
+	//buildUI();
+	//alert('I was clicked!');
+});
 
 var buildUI = function(obj) {
-	// for (var n in dbInfo) {
-	// //console.log(riotInfo[n][0].entries[0].division, "...");
-	// console.log(dbInfo[n]);
-// 		
-		// };
-// 		
-	console.log(obj.name, "this is dbInfo");
-	// summonerLbl.text = dbInfo.summoner;
-	// queueLbl.text = dbInfo.queue;
-	// nameLbl.text = dbInfo.name;
-	// tierLbl.text = dbInfo.tier;
-	// divisionLbl.text = dbInfo.division;
-	// leaguePointsLbl.text = dbInfo.leaguePoints;
-	// winsLbl.text = dbInfo.win;
-	// lossesLbl.text = dbInfo.losses;
-	// streakLbl.text = dbInfo.streak;
-	// veteranLbl.text = dbInfo.veteran;
-	// newLbl.text = dbInfo.new;
-	// inactiveLbl.text = dbInfo.inactive;
 	
-	// viewContainer.add(summonerLbl);
-	// viewContainer.add(queueLbl);
-	// viewContainer.add(nameLbl);
-	// viewContainer.add(tierLbl);
-	// viewContainer.add(divisionLbl);
-	// viewContainer.add(leaguePointsLbl);
-	// viewContainer.add(winsLbl);
-	// viewContainer.add(lossesLbl);
-	// viewContainer.add(streakLbl);
-	// viewContainer.add(veteranLbl);
-	// viewContainer.add(newLbl);
-	// viewContainer.add(inactiveLbl);
+	//rich test area - start
+	
+	var playerAssists = obj.recent[0].assists;
+	console.log("....", playerAssists);
+	
+	//rich test area - end
+	
+	//console.log("obj-buildUI", obj);
+	// infoWin.removeAllChildren();
+	//console.log(obj, "this is obj");
+	summonerLbl.text = obj.summoner;
+	queueLbl.text = obj.queue;
+	nameLbl.text = obj.name;
+	tierLbl.text = obj.tier + " " + obj.division + " " + obj.leaguePoints + " lp";
+	winsLbl.text = "W/L: " + obj.wins + "/" + obj.losses;
 
-	// for (var i = 0,
-		// j = dbInfo.recent.length; i < j; i++) {
-		// var label = Ti.UI.createLabel({
-			// text : dbInfo[i].name + "    " + dbInfo[i].leaguePoints + "lp    W/L:" + dbInfo[i].wins + "/" + dbInfo[i].losses,
-			// //color : "#fff",
-			// font : {
-				// fontSize : 20
-			// },
-			// bottom : 20
-		// });
-// }
-// viewContainer.add(label);
+	// if (obj.tier === "DIAMOND") img.image = "";
 
+
+	contentView.add(summonerLbl);
+	contentView.add(queueLbl);
+	contentView.add(nameLbl);
+	contentView.add(tierLbl);
+	contentView.add(winsLbl);
+
+	var winLoss = "";
+	//console.log(obj.recent, "......");
+
+
+	infoButton.addEventListener("singletap", function(e) {
+		//console.log("infobutton works");
+		contentView.removeAllChildren();
+		//console.log(obj.recent[0].playTime, "this is obj");
+		summonerLbl.text = obj.summoner;
+		queueLbl.text = obj.queue;
+		nameLbl.text = obj.name;
+		tierLbl.text = obj.tier + " " + obj.division + " " + obj.leaguePoints + " lp";
+		winsLbl.text = "W/L: " + obj.wins + "/" + obj.losses;
+
+		contentView.add(summonerLbl);
+		contentView.add(queueLbl);
+		contentView.add(nameLbl);
+		contentView.add(tierLbl);
+		contentView.add(winsLbl);
+		
+		//rich - test area
+		var playerAssists = "";
+		console.log(".... playersTime is empty now", playerAssists);
+		
+	});
+
+	matchButton.addEventListener("singletap", function(e) {
+		//console.log("matchbutton works");
+		contentView.removeAllChildren();
+		
+		
+		for (var i = 0, j = obj.recent.length; i < j; i++) {
+			
+			//console.log(".... for loop: ", playerAssists);
+			
+			var timePlayed =  Math.floor(obj.recent[i].playTime/60);
+	
+			//console.log(timePlayed);
+	
+			//parent view - layout horz
+			// win, kills, deaths,assists, cs, time as labels
+			var matchView = Ti.UI.createView({// individual rows
+				layout : "horizontal",
+				top : 10,
+				backgroundColor : "#000",
+				height: 60
+			});
+
+			var winLabel = Ti.UI.createLabel({
+				text : "...",
+				color : "#ffffff",
+				//backgroundColor : "ffffff",
+				font : {
+					fontSize : 48
+				},
+				width : 110,
+				left : 25
+			});
+			var kdaLabel = Ti.UI.createLabel({
+				//text : obj.recent[i].kills + "/" + obj.recent[i].deaths + "/" + obj.recent[i].assists,
+				text : obj.recent[i].kills + "/" + obj.recent[i].deaths + "/" + playerAssists,
+				color : "#ffffff",
+				//backgroundColor : "ffffff",
+				font : {
+					fontSize : 48
+				},
+				width : 200,
+				left : 25
+			});
+			var csLabel = Ti.UI.createLabel({
+				text : obj.recent[i].cs + " cs",
+				color : "#ffffff",
+				//backgroundColor : "ffffff",
+				font : {
+					fontSize : 48
+				},
+				width : 160,
+				left : 25
+			});
+			var timeLabel = Ti.UI.createLabel({
+				text : timePlayed + " mins",
+				color : "#ffffff",
+				//backgroundColor : "ffffff",
+				font : {
+					fontSize : 48
+				},
+				width : 190,
+				left : 25
+			});
+
+			matchView.add(winLabel);
+			matchView.add(kdaLabel);
+			matchView.add(csLabel);
+			matchView.add(timeLabel);
+
+			//console.log(obj.recent[i].win, "......");
+			if (obj.recent[i].win === true) {
+				winLabel.color = "#41EB45";
+				winLabel.text = "Won ";
+				//winLoss = "Won";
+			} else if (obj.recent[i].win === false) {
+				winLabel.color = "#FF200C";
+				winLabel.text = "Lost ";
+				// winLoss = "Lost";
+			}
+
+			matchScroll.add(matchView);
+		}
+
+		contentView.add(matchScroll);
+	});
+
+ 
+	infoWin.add(buttonView);
+	infoWin.add(contentView);
+	infoWin.add(backButton);
+	win.close();
+	infoWin.open();
 };
 exports.buildUI = buildUI;

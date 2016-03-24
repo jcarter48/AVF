@@ -5,23 +5,25 @@ var read = function() {
 
 	db.execute("CREATE TABLE IF NOT EXISTS riotTBL (id INTEGER PRIMARY KEY, summoner TEXT, queue TEXT, name TEXT, tier TEXT, division TEXT, leaguePoints TEXT, wins TEXT, losses TEXT, streak TEXT, veteran TEXT, new TEXT, inactive TEXT, recent TEXT)");
 	var dbRows = db.execute("SELECT summoner, queue, name, tier, division, leaguePoints, wins, losses, streak, veteran, new, inactive, recent FROM riotTBL");
-
-	var riotObj = {
-		summoner : dbRows.fieldByName("summoner"),
-		queue : dbRows.fieldByName("queue"),
-		name : dbRows.fieldByName("name"),
-		tier : dbRows.fieldByName("tier"),
-		division : dbRows.fieldByName("division"),
-		leaguePoints : dbRows.fieldByName("leaguePoints"),
-		wins : dbRows.fieldByName("wins"),
-		losses : dbRows.fieldByName("losses"),
-		streak : dbRows.fieldByName("streak"),
-		veteran : dbRows.fieldByName("veteran"),
-		new : dbRows.fieldByName("new"),
-		inactive : dbRows.fieldByName("inactive"),
-		recent : JSON.parse(dbRows.fieldByName("recent"))
-	};
-	//console.log(recent, "...");
+	while (dbRows.isValidRow()) {
+		var riotObj = {
+			summoner : dbRows.fieldByName("summoner"),
+			queue : dbRows.fieldByName("queue"),
+			name : dbRows.fieldByName("name"),
+			tier : dbRows.fieldByName("tier"),
+			division : dbRows.fieldByName("division"),
+			leaguePoints : Math.floor(dbRows.fieldByName("leaguePoints")),
+			wins : Math.floor(dbRows.fieldByName("wins")),
+			losses : Math.floor(dbRows.fieldByName("losses")),
+			streak : dbRows.fieldByName("streak"),
+			veteran : dbRows.fieldByName("veteran"),
+			new : dbRows.fieldByName("new"),
+			inactive : dbRows.fieldByName("inactive"),
+			recent : JSON.parse(dbRows.fieldByName("recent"))
+		};
+		dbRows.next();
+	}
+	//console.log("riotObj - read", riotObj);
 
 	uiModule.buildUI(riotObj);
 

@@ -1,5 +1,5 @@
 
-3/22/2016, 11:07:03 AM
+3/24/2016, 4:44:44 PM
 
 Operating System
   Name                        = Mac OS X
@@ -21,7 +21,7 @@ Titanium SDK
   Target Platform             = iphone
 
 Command
-  /usr/local/bin/node /Users/jacobcarter/.appcelerator/install/5.2.0/package/node_modules/titanium/lib/titanium.js build run --platform ios --log-level trace --sdk 5.2.0.GA --project-dir /Users/jacobcarter/Documents/AVF/Project3 --target simulator --ios-version 9.2 --device-family universal --deploy-type development --sim-type ipad --sim-version 9.2 --device-id 4728B2D0-5FD3-4EC0-9052-95B23AD786A4 --skip-js-minify --no-colors --no-progress-bars --no-prompt --prompt-type socket-bundle --prompt-port 63078 --config-file /var/folders/jq/f45s60gd5rsbdtnw_fllr1d00000gn/T/build-1458659221392.json --no-banner --project-dir /Users/jacobcarter/Documents/AVF/Project3
+  /usr/local/bin/node /Users/jacobcarter/.appcelerator/install/5.2.0/package/node_modules/titanium/lib/titanium.js build run --platform ios --log-level trace --sdk 5.2.0.GA --project-dir /Users/jacobcarter/Documents/AVF/Project3 --target simulator --ios-version 9.2 --device-family universal --sim-type ipad --sim-version 9.2 --device-id 4728B2D0-5FD3-4EC0-9052-95B23AD786A4 --skip-js-minify --liveview --deploy-type development --no-colors --no-progress-bars --no-prompt --prompt-type socket-bundle --prompt-port 64549 --config-file /var/folders/jq/f45s60gd5rsbdtnw_fllr1d00000gn/T/build-1458852282661.json --no-banner --project-dir /Users/jacobcarter/Documents/AVF/Project3
 
 [TRACE]  [ioslib] Validating iOS Simulator UDID 4728B2D0-5FD3-4EC0-9052-95B23AD786A4
 [TRACE]  [ioslib] Found iOS Simulator UDID 4728B2D0-5FD3-4EC0-9052-95B23AD786A4
@@ -81,10 +81,9 @@ Command
 [INFO]   Profiler disabled
 [INFO]   Set to copy files instead of symlinking
 [INFO]   Initializing the build directory
-[TRACE]  offline build file /var/folders/jq/f45s60gd5rsbdtnw_fllr1d00000gn/T/build-2853887050e6841067c0e59afe0afcfbd4f603ea.json
-[TRACE]  online 0
-[TRACE]  last build was 53914.377 sec ago, need a re-verify and re-build
-[TRACE]  offline file {"key":"9VYpwEAfPf/198bXyypfhw==","pepper":"7CeWbna6F0K+yY68bcKNdg==","hmacKey":"ldYVsg/SlHU2GNDDJ/FmyQ==","o":100036118,"u":"02f49afc-3578-494e-8376-0c5e87073452","p":"free","i":"56f08cfc2aa054091536133a","success":true,"url":"https://security.appcelerator.com/app-verify","username":"hepzat@live.com","timestamp":1458605309892,"offline":true,"skipped":true}, age=53913485
+[TRACE]  offline build file /var/folders/jq/f45s60gd5rsbdtnw_fllr1d00000gn/T/build-1b39fbe56de41a098d3fce69ed24dccfda7cc5ce.json
+[TRACE]  online 1
+[TRACE]  optimizing build, last build was 76129.017 sec ago
 [INFO]   Creating Xcode project
 [TRACE]  Removing pre-compile phase
 [TRACE]  No native module libraries to add
@@ -150,6 +149,12 @@ Command
 [DEBUG]  Overwriting /Users/jacobcarter/Documents/AVF/Project3/Resources/KS_nav_ui.png => /Users/jacobcarter/Documents/AVF/Project3/build/iphone/build/Products/Debug-iphonesimulator/Project3.app/KS_nav_ui.png
 [TRACE]  No change, skipping /Users/jacobcarter/Documents/AVF/Project3/build/iphone/build/Products/Debug-iphonesimulator/Project3.app/KS_nav_views.png
 [DEBUG]  Overwriting /Users/jacobcarter/Documents/AVF/Project3/Resources/KS_nav_views.png => /Users/jacobcarter/Documents/AVF/Project3/build/iphone/build/Products/Debug-iphonesimulator/Project3.app/KS_nav_views.png
+[TRACE]  No change, skipping /Users/jacobcarter/Documents/AVF/Project3/build/iphone/build/Products/Debug-iphonesimulator/Project3.app/background.png
+[DEBUG]  Overwriting /Users/jacobcarter/Documents/AVF/Project3/Resources/background.png => /Users/jacobcarter/Documents/AVF/Project3/build/iphone/build/Products/Debug-iphonesimulator/Project3.app/background.png
+[TRACE]  No change, skipping /Users/jacobcarter/Documents/AVF/Project3/build/iphone/build/Products/Debug-iphonesimulator/Project3.app/logo.png
+[DEBUG]  Overwriting /Users/jacobcarter/Documents/AVF/Project3/Resources/logo.png => /Users/jacobcarter/Documents/AVF/Project3/build/iphone/build/Products/Debug-iphonesimulator/Project3.app/logo.png
+[TRACE]  No change, skipping /Users/jacobcarter/Documents/AVF/Project3/build/iphone/build/Products/Debug-iphonesimulator/Project3.app/theBasics.mp4
+[DEBUG]  Overwriting /Users/jacobcarter/Documents/AVF/Project3/Resources/theBasics.mp4 => /Users/jacobcarter/Documents/AVF/Project3/build/iphone/build/Products/Debug-iphonesimulator/Project3.app/theBasics.mp4
 [TRACE]  No change, skipping /Users/jacobcarter/Documents/AVF/Project3/build/iphone/Assets.xcassets/LaunchImage.launchimage/Default-568h@2x.png
 [DEBUG]  Overwriting /Users/jacobcarter/Documents/AVF/Project3/Resources/iphone/Default-568h@2x.png => /Users/jacobcarter/Documents/AVF/Project3/build/iphone/Assets.xcassets/LaunchImage.launchimage/Default-568h@2x.png
 [TRACE]  No change, skipping /Users/jacobcarter/Documents/AVF/Project3/build/iphone/Assets.xcassets/LaunchImage.launchimage/Default-667h@2x.png
@@ -170,9 +175,10 @@ Command
 [DEBUG]  Overwriting /Users/jacobcarter/Documents/AVF/Project3/Resources/iphone/Default@2x.png => /Users/jacobcarter/Documents/AVF/Project3/build/iphone/Assets.xcassets/LaunchImage.launchimage/Default@2x.png
 [DEBUG]  Copying CSS files
 [INFO]   Processing JavaScript files
+[DEBUG]  Overwriting /Users/jacobcarter/Documents/AVF/Project3/Resources/Copy of ui.js => /Users/jacobcarter/Documents/AVF/Project3/build/iphone/build/Products/Debug-iphonesimulator/Project3.app/Copy of ui.js
 [DEBUG]  Overwriting /Users/jacobcarter/Documents/AVF/Project3/Resources/adb.js => /Users/jacobcarter/Documents/AVF/Project3/build/iphone/build/Products/Debug-iphonesimulator/Project3.app/adb.js
 [DEBUG]  Overwriting /Users/jacobcarter/Documents/AVF/Project3/Resources/api.js => /Users/jacobcarter/Documents/AVF/Project3/build/iphone/build/Products/Debug-iphonesimulator/Project3.app/api.js
-[DEBUG]  Overwriting /Users/jacobcarter/Documents/AVF/Project3/Resources/app.js => /Users/jacobcarter/Documents/AVF/Project3/build/iphone/build/Products/Debug-iphonesimulator/Project3.app/app.js
+[DEBUG]  Overwriting /var/folders/jq/f45s60gd5rsbdtnw_fllr1d00000gn/T/liveview.js => /Users/jacobcarter/Documents/AVF/Project3/build/iphone/build/Products/Debug-iphonesimulator/Project3.app/app.js
 [DEBUG]  Overwriting /Users/jacobcarter/Documents/AVF/Project3/Resources/database.js => /Users/jacobcarter/Documents/AVF/Project3/build/iphone/build/Products/Debug-iphonesimulator/Project3.app/database.js
 [DEBUG]  Overwriting /Users/jacobcarter/Documents/AVF/Project3/Resources/ui.js => /Users/jacobcarter/Documents/AVF/Project3/build/iphone/build/Products/Debug-iphonesimulator/Project3.app/ui.js
 [DEBUG]  Overwriting /Users/jacobcarter/Library/Application Support/Titanium/modules/commonjs/ti.cloud/3.2.10/ti.cloud.js => /Users/jacobcarter/Documents/AVF/Project3/build/iphone/build/Products/Debug-iphonesimulator/Project3.app/ti.cloud.js
@@ -191,13 +197,13 @@ Command
 [INFO]   Removing files
 [DEBUG]  Removing empty directories
 [INFO]   Skipping xcodebuild
-[INFO]   Finished building the application in 988ms
+[INFO]   Finished building the application in 1s 653ms
 [INFO]   Launching iOS Simulator
 [TRACE]  [ioslib] Selected iOS Simulator: iPad 2
 [TRACE]  [ioslib]   UDID    = 4728B2D0-5FD3-4EC0-9052-95B23AD786A4
 [TRACE]  [ioslib]   iOS     = 9.2
 [TRACE]  [ioslib] Autoselected Xcode: 7.2.1
-[TRACE]  [ioslib] Removing old log file: /Users/jacobcarter/Library/Developer/CoreSimulator/Devices/4728B2D0-5FD3-4EC0-9052-95B23AD786A4/data/Containers/Data/Application/D24DF83B-F8C6-41CE-B406-222CF4326BA7/Documents/950d462a-c66d-4919-9222-8c2acbc8c434.log
+[TRACE]  [ioslib] Removing old log file: /Users/jacobcarter/Library/Developer/CoreSimulator/Devices/4728B2D0-5FD3-4EC0-9052-95B23AD786A4/data/Containers/Data/Application/2A60F496-6776-449E-8A84-60FE5EC8B550/Documents/950d462a-c66d-4919-9222-8c2acbc8c434.log
 [TRACE]  [ioslib] iPad 2 Simulator already running with the correct udid
 [TRACE]  [ioslib] Tailing iPad 2 Simulator system log: /Users/jacobcarter/Library/Logs/CoreSimulator/4728B2D0-5FD3-4EC0-9052-95B23AD786A4/system.log
 [TRACE]  [ioslib] Running: osascript "/Users/jacobcarter/Library/Application Support/Titanium/mobilesdk/osx/5.2.0.GA/node_modules/ioslib/lib/sim_focus.scpt" "Simulator"
@@ -206,5 +212,5 @@ Command
 [TRACE]  [ioslib] App installed
 [TRACE]  [ioslib] Running: /Applications/Xcode.app/Contents/Developer/usr/bin/simctl launch 4728B2D0-5FD3-4EC0-9052-95B23AD786A4 com.carter.Project3
 [TRACE]  [ioslib] App launched
-[TRACE]  [ioslib] Found application log file: /Users/jacobcarter/Library/Developer/CoreSimulator/Devices/4728B2D0-5FD3-4EC0-9052-95B23AD786A4/data/Containers/Data/Application/3D203D24-B099-4FA5-B3CD-1891FB655DBE/Documents/950d462a-c66d-4919-9222-8c2acbc8c434.log
 [TRACE]  [Project3] assertion failed: 15C50 13C75: libxpc.dylib + 71630 [60B4AA4E-F817-3C94-B4DA-0620CC9847B6]: 0x7d
+[TRACE]  [ioslib] Found application log file: /Users/jacobcarter/Library/Developer/CoreSimulator/Devices/4728B2D0-5FD3-4EC0-9052-95B23AD786A4/data/Containers/Data/Application/268FAA2D-A3AE-4FDC-A0DF-E89084D6E5AC/Documents/950d462a-c66d-4919-9222-8c2acbc8c434.log

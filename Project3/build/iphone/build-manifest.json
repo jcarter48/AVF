@@ -3120,6 +3120,21 @@
 			"mtime": "2016-03-17T18:44:24.000Z",
 			"size": 683
 		},
+		"background.png": {
+			"hash": "81bd6cdf3df8d40a7eb2100d60dc1147",
+			"mtime": "2016-03-24T00:14:07.000Z",
+			"size": 9106
+		},
+		"logo.png": {
+			"hash": "a7c058e7c445ac5a52d7f403bb500942",
+			"mtime": "2016-03-24T01:03:08.000Z",
+			"size": 85950
+		},
+		"theBasics.mp4": {
+			"hash": "14e5502e9da63aec237a8131a3ec6247",
+			"mtime": "2016-03-24T15:35:19.000Z",
+			"size": 87612572
+		},
 		"Default-568h@2x.png": {
 			"hash": "39604172bca979c1482b8526b4b8b207",
 			"mtime": "2016-03-17T18:44:24.000Z",
@@ -3212,5 +3227,6 @@
 	"encryptJS": false,
 	"useJSCore": false,
 	"runOnMainThread": false,
-	"useAutoLayout": false
+	"useAutoLayout": false,
+	"liveview": true
 }
