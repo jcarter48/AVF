@@ -18,9 +18,10 @@ var authenticate = function() {
 };
 var saveCloud = function(apiInfo) {
 	//console.log(apiInfo, ".........");
-	
+
 	//for (var i = 0, j = apiInfo.recent.length; i < j; i++) {
-	for (var i = 0, j = apiInfo.length; i < j; i++) {
+	for (var i = 0,
+	    j = apiInfo.length; i < j; i++) {
 		Cloud.Objects.create({
 			classname : "recent",
 			fields : {

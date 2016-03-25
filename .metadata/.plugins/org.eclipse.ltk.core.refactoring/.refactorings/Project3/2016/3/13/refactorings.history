@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Project3/Resources/League of Legends- The Basics.mp4&apos; to &apos;theBasics.mp4&apos;" description="Rename resource &apos;League of Legends- The Basics.mp4&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Resources/League of Legends- The Basics.mp4" name="theBasics.mp4" stamp="1458833750501" updateReferences="true"/>
+</session>

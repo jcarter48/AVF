@@ -1,0 +1,23 @@
+
+var infoWin = Ti.UI.createWindow({
+	backgroundColor: "#fff"
+});
+
+
+
+var infoButton = Titanium.UI.createButton({
+	title : 'Stats',
+	//top: 50,
+	width : 384,
+	height : 50,
+	//left: 150,
+	borderColor : "red"
+});
+infoButton.addEventListener("singletap", function(e) {
+	console.log("infobutton works");
+	infoWin.open();
+});
+
+infoWin.add(infoButton);
+infoWin();
+

@@ -1,5 +1,5 @@
 var dbModule = require("database");
-// var adbModule = require("adb");
+
 //getData 3 for recent matches
 var getData3 = function(obj, x5) {
 
@@ -8,14 +8,9 @@ var getData3 = function(obj, x5) {
 	var onLoad = function() {
 
 		var riotInfo = JSON.parse(this.responseText);
-		
-		// for (var n in riotInfo) {
-			// console.log(riotInfo[n][0].name);
-		// };
-		//console.log(riotInfo.games[0].playerOrTeamName);
-		
+
 		var riotArray = [];
-	
+
 		for (var i = 0,
 		    j = riotInfo.games.length; i < j; i++) {
 			riotArray.push({
@@ -28,8 +23,8 @@ var getData3 = function(obj, x5) {
 			});
 		}
 		//console.log(kills, "...");
-		obj.recent = riotArray;	
-		//console.log("obj", obj);	
+		obj.recent = riotArray;
+		//console.log("obj", obj);
 		dbModule.save(obj);
 		adbModule.saveCloud(obj);
 	};
@@ -50,32 +45,31 @@ var getData3 = function(obj, x5) {
 
 //getData 2 for summoner id
 var getData2 = function(x3) {
-//console.log("x3", x3);
-	var url = "https://na.api.pvp.net/api/lol/na/v2.5/league/by-summoner/" + x3 +"/entry?api_key=d45e5d73-424f-49a8-8be9-d60f3f9684c7";
+	//console.log("x3", x3);
+	var url = "https://na.api.pvp.net/api/lol/na/v2.5/league/by-summoner/" + x3 + "/entry?api_key=d45e5d73-424f-49a8-8be9-d60f3f9684c7";
 
 	var onLoad = function() {
 
 		var riotInfo = JSON.parse(this.responseText);
-	
+
 		for (var n in riotInfo) {
-	//console.log(riotInfo[n][0].entries[0].division, "...");
+			//console.log(riotInfo[n][0].entries[0].division, "...");
 			var riotObj = {
-			summoner : riotInfo[n][0].entries[0].playerOrTeamName,
-			queue : riotInfo[n][0].queue,
-			name : riotInfo[n][0].name,
-			tier : riotInfo[n][0].tier,
-			division : riotInfo[n][0].entries[0].division,
-			leaguePoints : riotInfo[n][0].entries[0].leaguePoints,
-			wins : riotInfo[n][0].entries[0].wins,
-			losses : riotInfo[n][0].entries[0].losses,
-			streak : riotInfo[n][0].entries[0].isHotStreak,
-			veteran : riotInfo[n][0].entries[0].isVeteran,
-			new : riotInfo[n][0].entries[0].isFreshBlood,
-			inactive : riotInfo[n][0].entries[0].isInactive
+				summoner : riotInfo[n][0].entries[0].playerOrTeamName,
+				queue : riotInfo[n][0].queue,
+				name : riotInfo[n][0].name,
+				tier : riotInfo[n][0].tier,
+				division : riotInfo[n][0].entries[0].division,
+				leaguePoints : riotInfo[n][0].entries[0].leaguePoints,
+				wins : riotInfo[n][0].entries[0].wins,
+				losses : riotInfo[n][0].entries[0].losses,
+				streak : riotInfo[n][0].entries[0].isHotStreak,
+				veteran : riotInfo[n][0].entries[0].isVeteran,
+				new : riotInfo[n][0].entries[0].isFreshBlood,
+				inactive : riotInfo[n][0].entries[0].isInactive
+			};
 		};
-		};
-		
-		
+
 		getData3(riotObj, x3);
 		// dbModule.save(riotObj);
 		// adbModule.saveCloud(riotObj);
@@ -96,27 +90,26 @@ var getData2 = function(x3) {
 	xhr.send();
 };
 
-
 //catch textfield value
 var getData1 = function(x1) {
 	//console.log(x1, ".... x1");
-	
+
 	var url = "https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/" + x1 + "/?api_key=d45e5d73-424f-49a8-8be9-d60f3f9684c7";
-	
+
 	var onLoad = function() {
 
 		var riotInfo = JSON.parse(this.responseText);
-		
+
 		//console.log(riotInfo, ".... riotInfo");
-		
+
 		for (var n in riotInfo) {
 			//console.log(riotInfo[n].id);
 			getData2(riotInfo[n].id);
-		//	getData3(riotInfo[n].id);
+			//	getData3(riotInfo[n].id);
 		};
 		//console.log(riotInfo);
 		//console.log(riotInfo.id);
-		
+
 	};
 
 	var onError = function(x2) {

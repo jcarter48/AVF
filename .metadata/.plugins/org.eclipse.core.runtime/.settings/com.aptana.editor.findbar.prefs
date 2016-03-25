@@ -1,3 +1,3 @@
-FIND_BAR_DECORATOR_FIND_ENTRIES=\#\n\#Sat Mar 19 17\:20\:21 EDT 2016\n9\=championsKilled\n8\=hotStreak\n7\=streak\n6\=challenger\n5\=riotInfo\n4\=...\n3\=http\n11\=wins\n2\=error\n10\=losses\n1\=getData1\n0\=onError\n
-FIND_BAR_DECORATOR_REPLACE_ENTRIES=\#\n\#Sat Mar 19 16\:00\:48 EDT 2016\n17\=weather\n16\=weatherDB\n15\=weatherTBL\n14\=wObj\n13\=viewContainer1\n12\=windSpeed\n11\=riot\n10\=dbInfo\n9\=games\n8\=championsKilled\n7\=deaths\n6\=assists\n5\=cs\n4\=playTime\n3\=kills\n2\=win\n1\=recent\n0\=apiInfo\n
+FIND_BAR_DECORATOR_FIND_ENTRIES=\#\n\#Thu Mar 24 20\:23\:01 EDT 2016\n9\=imgView\n8\=infoWin\n7\=win\n6\=fontSize\n5\=text\n4\=button\n3\=color\n2\=Color\n10\=infoButton\n1\=single\n0\=singletap\n
+FIND_BAR_DECORATOR_REPLACE_ENTRIES=\#\n\#Thu Mar 24 20\:23\:01 EDT 2016\n19\=wObj\n18\=viewContainer1\n17\=windSpeed\n16\=riot\n15\=dbInfo\n14\=games\n13\=championsKilled\n12\=deaths\n11\=assists\n10\=cs\n9\=playTime\n8\=kills\n7\=win\n6\=recent\n5\=apiInfo\n4\=obj\n3\=contentView\n2\=mainScroll\n1\=tierImg\n0\=click\n
 eclipse.preferences.version=1

@@ -25,7 +25,7 @@ var videoPlayer = Titanium.Media.createVideoPlayer({
 //scrollview for first page
 var mainScroll = Ti.UI.createScrollView({
 	layout : "vertical",
-	// backgroundImage : "background.png",
+	backgroundImage : "background.png",
 	backgroundRepeat : "repeat",
 	//top : 10,
 	// backgroundColor : "#fff",
@@ -37,7 +37,16 @@ var format1 = {
 	text : "...",
 	color : "#ffffff",
 	font : {
-		fontSize : 64
+		fontSize : 80
+	},
+	top : 10
+};
+
+var format2 = {
+	text : "...",
+	color : "#ffffff",
+	font : {
+		fontSize : 48
 	},
 	top : 10
 };
@@ -67,7 +76,7 @@ var textButton = Ti.UI.createButton({
 	width : 150,
 	top : 20,
 	font : {
-		fontSize : 32
+		fontSize : 28
 	},
 	color : "#444349",
 	backgroundColor : "#ffffff",
@@ -86,10 +95,10 @@ mainScroll.add(videoPlayer);
 
 //win for 2nd page for basic data ------------------------------2nd page
 var infoWin = Ti.UI.createWindow({
-	backgroundColor : "#900",
+	//backgroundColor : "#900",
 	layout : "horizontal",
-	top : 0,
-	// backgroundImage : "background.png",
+	top : 20,
+	backgroundImage : "background.png",
 	backgroundRepeat : "repeat",
 	zIndex : 1
 });
@@ -97,34 +106,35 @@ var infoButton = Titanium.UI.createButton({
 	title : 'Stats',
 	color : "#444349",
 	backgroundColor : "#ffffff",
-	//top: 50,
+	//top: 20,
 	width : 384,
 	height : 50,
 	//left: 150,
 	borderColor : "#444349",
 	borderWidth : 6,
 	font : {
-		fontSize : 24
+		fontSize : 28
 	}
 });
 var matchButton = Titanium.UI.createButton({
 	title : 'Recent Matches',
 	color : "#444349",
 	backgroundColor : "#ffffff",
-	//top: 50,
+	//top: 20,
 	width : 384,
 	height : 50,
 	// right: 150,
 	borderColor : "#444349",
 	borderWidth : 6,
 	font : {
-		fontSize : 24
+		fontSize : 28
 	}
 });
 var buttonView = Ti.UI.createView({
 	layout : "horizontal",
 	width : 768,
 	height : "5%",
+	top : 20,
 	// borderColor : "#fff",
 	// borderWidth : 3,
 	zIndex : 3
@@ -135,21 +145,29 @@ buttonView.add(matchButton);
 
 var contentView = Ti.UI.createView({
 	layout : "vertical",
-	backgroundColor : "#ccc",
-	height : "90%",
+	//backgroundColor : "#ccc",
+	backgroundImage : "background.png",
+	backgroundRepeat : "repeat",
+	height : "85%",
+	top : 10,
 	zIndex : 2
 });
 var backButton = Ti.UI.createButton({
-	title : "Search another summoner!",
-	width : 200,
+	title : "Search Another Summoner!",
+	width : 384,
 	height : "5%",
 	bottom : 0,
 	left : 0,
 	color : "#444349",
 	backgroundColor : "#ffffff",
-	zIndex : 4
+	zIndex : 4,
+	borderColor : "#444349",
+	borderWidth : 6,
+	font : {
+		fontSize : 28
+	}
 });
-backButton.addEventListener("singletap", function() {
+backButton.addEventListener("click", function() {
 	contentView.removeAllChildren();
 	infoWin.removeAllChildren();
 	infoWin.close();
@@ -158,11 +176,14 @@ backButton.addEventListener("singletap", function() {
 });
 
 var summonerLbl = Ti.UI.createLabel(format1);
-var queueLbl = Ti.UI.createLabel(format1);
-var nameLbl = Ti.UI.createLabel(format1);
-var tierLbl = Ti.UI.createLabel(format1);
-var winsLbl = Ti.UI.createLabel(format1);
-
+var queueLbl = Ti.UI.createLabel(format2);
+var nameLbl = Ti.UI.createLabel(format2);
+var tierLbl = Ti.UI.createLabel(format2);
+var winsLbl = Ti.UI.createLabel(format2);
+var tierImg = Ti.UI.createImageView({
+	height : 300,
+	width : 300
+});
 var matchScroll = Ti.UI.createScrollView({
 	layout : "vertical",
 	top : 10,
@@ -175,7 +196,7 @@ var matchScroll = Ti.UI.createScrollView({
 //scrollview for recent matches
 
 //click event textfield.value
-textButton.addEventListener('singletap', function() {
+textButton.addEventListener('click', function() {
 	// alert(textField.value);
 	var apiModule = require("api");
 	apiModule.getData1(textField.value);
@@ -187,7 +208,6 @@ textButton.addEventListener('singletap', function() {
 
 var buildUI = function(obj) {
 
-
 	//console.log("obj-buildUI", obj);
 	// infoWin.removeAllChildren();
 	//console.log(obj, "this is obj");
@@ -197,18 +217,32 @@ var buildUI = function(obj) {
 	tierLbl.text = obj.tier + " " + obj.division + " " + obj.leaguePoints + " lp";
 	winsLbl.text = "W/L: " + obj.wins + "/" + obj.losses;
 
-	// if (obj.tier === "DIAMOND") img.image = "";
+	if (obj.tier === "CHALLENGER")
+		tierImg.image = "challenger.png";
+	if (obj.tier === "MASTER")
+		tierImg.image = "master.png";
+	if (obj.tier === "DIAMOND")
+		tierImg.image = "diamond.png";
+	if (obj.tier === "PLATINUM")
+		tierImg.image = "platinum.png";
+	if (obj.tier === "GOLD")
+		tierImg.image = "gold.png";
+	if (obj.tier === "SILVER")
+		tierImg.image = "silver.png";
+	if (obj.tier === "BRONZE")
+		tierImg.image = "bronze.png";
 
 	contentView.add(summonerLbl);
 	contentView.add(queueLbl);
 	contentView.add(nameLbl);
 	contentView.add(tierLbl);
 	contentView.add(winsLbl);
+	contentView.add(tierImg);
 
 	var winLoss = "";
 	//console.log(obj.recent, "......");
 
-	infoButton.addEventListener("singletap", function(e) {
+	infoButton.addEventListener("click", function(e) {
 		//console.log("infobutton works");
 		contentView.removeAllChildren();
 		//console.log(obj.recent[0].playTime, "this is obj");
@@ -223,6 +257,7 @@ var buildUI = function(obj) {
 		contentView.add(nameLbl);
 		contentView.add(tierLbl);
 		contentView.add(winsLbl);
+		contentView.add(tierImg);
 
 		//rich - test area
 		// var playerAssists = "";
@@ -230,24 +265,24 @@ var buildUI = function(obj) {
 
 	});
 
-	matchButton.addEventListener("singletap", function(e) {
-		console.log("matchbutton works");
+	matchButton.addEventListener("click", function(e) {
+		//console.log("matchbutton works");
 		contentView.removeAllChildren();
 		matchScroll.removeAllChildren();
 
 		var matches = function() {
-			for (var i = 0, j = obj.recent.length; i < j; i++) {
-				console.log(i + " : " + obj.recent[i]);
+			for (var i = 0,
+			    j = obj.recent.length; i < j; i++) {
+				//console.log(i + " : " + obj.recent[i]);
 
 				var timePlayed = Math.floor(obj.recent[i].playTime / 60);
-
 
 				//parent view - layout horz
 				// win, kills, deaths,assists, cs, time as labels
 				var matchView = Ti.UI.createView({// individual rows
 					layout : "horizontal",
 					top : 10,
-					backgroundColor : "#000",
+					backgroundColor : "#40000000",
 					height : 60
 				});
 
@@ -262,7 +297,7 @@ var buildUI = function(obj) {
 					left : 25
 				});
 				var kdaLabel = Ti.UI.createLabel({
-					text : i + ": " + obj.recent[i].kills + "/" + obj.recent[i].deaths + "/" + obj.recent[i].assists,
+					text : obj.recent[i].kills + "/" + obj.recent[i].deaths + "/" + obj.recent[i].assists,
 					// text : obj.recent[i].kills + "/" + obj.recent[i].deaths + "/" + playerAssists,
 					color : "#ffffff",
 					//backgroundColor : "ffffff",
@@ -296,10 +331,17 @@ var buildUI = function(obj) {
 				//console.log(obj.recent[i].win, "......");
 				if (obj.recent[i].win === true) {
 					winLabel.color = "#41EB45";
+					kdaLabel.color = "#41EB45";
+					csLabel.color = "#41EB45";
+					timeLabel.color = "#41EB45";
 					winLabel.text = "Won ";
 					//winLoss = "Won";
 				} else if (obj.recent[i].win === false) {
 					winLabel.color = "#FF200C";
+					winLabel.color = "#FF200C";
+					kdaLabel.color = "#FF200C";
+					csLabel.color = "#FF200C";
+					timeLabel.color = "#FF200C";
 					winLabel.text = "Lost ";
 					// winLoss = "Lost";
 				}

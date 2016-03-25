@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="onError" key="selection"/>
+		<item value="singletap" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="onError"/>
-			<item value="getData1"/>
-			<item value="error"/>
-			<item value="http"/>
-			<item value="..."/>
-			<item value="riotInfo"/>
-			<item value="challenger"/>
-			<item value="streak"/>
+			<item value="singletap"/>
+			<item value="single"/>
+			<item value="Color"/>
+			<item value="color"/>
+			<item value="button"/>
+			<item value="text"/>
+			<item value="fontSize"/>
+			<item value="win"/>
 		</list>
 		<list key="replacehistory">
 		</list>

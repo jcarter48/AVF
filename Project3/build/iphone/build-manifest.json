@@ -3125,10 +3125,45 @@
 			"mtime": "2016-03-24T00:14:07.000Z",
 			"size": 9106
 		},
+		"bronze.png": {
+			"hash": "4f9e6c72c9744e912dbf6c19b13101f9",
+			"mtime": "2016-03-24T23:44:54.000Z",
+			"size": 40783
+		},
+		"challenger.png": {
+			"hash": "cf0f47bff9b6a9c03cf7e5af274e60ba",
+			"mtime": "2016-03-24T23:43:51.000Z",
+			"size": 56911
+		},
+		"diamond.png": {
+			"hash": "2f75ad0ac5b1cc1f3e9ca4cc87f67597",
+			"mtime": "2016-03-24T23:44:27.000Z",
+			"size": 47481
+		},
+		"gold.png": {
+			"hash": "0ea6d68717f7292337ec6d70c6b47a46",
+			"mtime": "2016-03-24T23:44:45.000Z",
+			"size": 41092
+		},
 		"logo.png": {
 			"hash": "a7c058e7c445ac5a52d7f403bb500942",
 			"mtime": "2016-03-24T01:03:08.000Z",
 			"size": 85950
+		},
+		"master.png": {
+			"hash": "53b3be1b304304d5c36d18649af1b422",
+			"mtime": "2016-03-24T23:44:12.000Z",
+			"size": 50777
+		},
+		"platinum.png": {
+			"hash": "0bb6dce54aaa3e13a0c0bfd9f56eac10",
+			"mtime": "2016-03-24T23:44:36.000Z",
+			"size": 46037
+		},
+		"silver.png": {
+			"hash": "a81570abd6c7b4f109b359ac9ebaa1ca",
+			"mtime": "2016-03-24T23:45:05.000Z",
+			"size": 36415
 		},
 		"theBasics.mp4": {
 			"hash": "14e5502e9da63aec237a8131a3ec6247",
@@ -3227,6 +3262,5 @@
 	"encryptJS": false,
 	"useJSCore": false,
 	"runOnMainThread": false,
-	"useAutoLayout": false,
-	"liveview": true
+	"useAutoLayout": false
 }
